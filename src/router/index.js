@@ -78,6 +78,12 @@ const routes = [
         component: () => import('../components/Flashcards'),
         beforeEnter: notLoggedInGuard,
     },
+    {
+        path: '/translate',
+        name: 'translate',
+        component: () => import('../components/Translator'),
+        beforeEnter: notLoggedInGuard,
+    },
 ];
 
 

@@ -9,10 +9,10 @@
         <a v-on:click="changeRoute('/flashcards')">
           <li>Fiszki</li>
         </a>
-        <a v-on:click="changeRoute('/translate')">
+        <a v-on:click="changeRoute('/translateEx')">
           <li>Tłumaczenie</li>
         </a>
-        <a v-on:click="changeRoute('/googleTranslate')">
+        <a v-on:click="changeRoute('/translate')">
           <li>Translator</li>
         </a>
         <a>
