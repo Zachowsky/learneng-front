@@ -7,9 +7,6 @@
     </div>
   </div>
 </template>
-
-
-
 <script>
 
 import HeaderDash from "@/components/HeaderDash";

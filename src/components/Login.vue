@@ -9,11 +9,11 @@
         <a><p v-on:click="changeRoute('/register')">Nie masz konta? Zarejestruj się!</p></a>
       </div>
       <div class="formm">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Hasło">
+        <input v-model="form.email" type="email" placeholder="Email">
+        <input v-model="form.password" type="password" placeholder="Hasło">
       </div>
 
-      <button class="bn632-hover bn22" v-on:click="changeRoute('/dashboard')"><span>Zaloguj się</span></button><br>
+      <button class="bn632-hover bn22" v-on:click="signIn"><span>Zaloguj się</span></button><br>
       <button class="bn632-hover bn22" v-on:click="changeRoute('/login')"><span>Google</span></button>
 
 
@@ -23,8 +23,35 @@
 </template>
 
 <script>
+
+import axios from 'axios'
+import endpoint from '../endpoint'
+
 export default {
   name: "Login",
+
+  data(){
+    return{
+      form: {
+        email:'',
+        password:'',
+      }
+    }
+  },
+
+  methods:{
+    signIn(){
+      axios.post(`${endpoint.url}/login`, this.form)
+      .then((response) =>{
+        if(response.status === 200) {
+          this.changeRoute("/dashboard");
+        }
+      })
+      .catch(() => {
+        console.log('err');
+      })
+    }
+  }
 }
 </script>
 

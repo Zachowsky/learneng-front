@@ -5,20 +5,51 @@
       <div class="info">Wypełnij formularz rejestracji</div>
       <div class="register_form">
         <div class="reg"><a><p v-on:click="changeRoute('/')">Wróć do strony głównej</p></a></div>
-        <div class="formm" style="top: 30px;"><input type="text" placeholder="Imię"></div>
-        <div class="formm" style="top: 130px;"><input type="text" placeholder="Nazwisko"></div>
-        <div class="formm" style="top: 230px;"><input type="email" placeholder="Email"></div>
-        <div class="formm" style="top: 330px;"><input type="password" placeholder="Hasło"></div>
-        <div class="formm" style="top: 430px;"><input type="password" placeholder="Powtórz hasło"></div>
-        <button class="bn632-hover bn22" v-on:click="changeRoute('/dashboard')"><span>Utwórz konto!</span></button><br>
+        <div class="formm" style="top: 30px;"><input type="text" v-model="form.name" placeholder="Imię"></div>
+        <div class="formm" style="top: 130px;"><input type="text" v-model="form.surname" placeholder="Nazwisko"></div>
+        <div class="formm" style="top: 230px;"><input type="email" v-model="form.email" placeholder="Email"></div>
+        <div class="formm" style="top: 330px;"><input type="password" v-model="form.password" placeholder="Hasło"></div>
+        <div class="formm" style="top: 430px;"><input type="password" v-model="form.password2" placeholder="Powtórz hasło"></div>
+        <button class="bn632-hover bn22" v-on:click="register"><span>Utwórz konto!</span></button><br>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
+import axios from "axios";
+import endpoint from "@/endpoint.json";
+
 export default {
+
   name: "Register",
+
+  data() {
+    return {
+      form: {
+        name: '',
+        surname: '',
+        email: '',
+        password: '',
+        password2: '',
+      }
+    }
+  },
+
+  methods: {
+    register(){
+      axios.post(`${endpoint.url}/register`, this.form)
+      .then((response) => {
+        if(response.status === 200){
+          this.changeRoute("/dashboard");
+        }
+      })
+      .catch(()=>{
+        console.log("err");
+      })
+    }
+  }
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="form">
   <form v-on:submit="formSubmit">
     <input type="text" v-model="textToTranslate" placeholder="Wprowadz slowo">
     <input type="submit" value="Tlumacz">
