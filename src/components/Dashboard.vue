@@ -1,176 +1,140 @@
 <template>
 <div class="main">
-  <HeaderDash></HeaderDash>
+  <header>
+    <div class="logo">
+      <img src="logo.png">
+    </div>
+    <div class="not_full_page">
+    <div class="menu">
+      <ul>
+        <a>
+          <li v-on:click="component= 'grammar'">Gramatyka</li>
+        </a>
+        <a>
+          <li v-on:click="component= 'flashcards'">Fiszki</li>
+        </a>
+        <a>
+          <li v-on:click="component= 'translate'">Tłumaczenie</li>
+        </a>
+        <a>
+          <li v-on:click="component= 'Translator'">Translator</li>
+        </a>
+      </ul>
+    </div>
+    </div>
+    <div class="user">
+      <p>Witaj, User</p>
+    </div>
+  </header>
   <div class="content">
-  <div class="type">
-    <div class="type_info">Początek</div>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-      <a href="#">Link 4</a>
-      <a href="#">Link 5</a>
-      <a href="#">Link 6</a>
-    </div>
+    <component v-bind:is="component"></component>
   </div>
-  <div class="type">
-    <div class="type_info">Zaimki osobowe</div>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <div class="type">
-    <div class="type_info">Rzeczowniki policzalne i niepoliczalne</div>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-
-  </div>
-  <div class="type">
-    <div class="type_info">Czasy</div>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <div class="type">
-    <div class="type_info">Stopniowanie</div>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <div class="type">
-    <div class="type_info">Przyimki i przedimki</div>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-
-  </div>
-  </div>
-
 </div>
 </template>
 
 <script>
 
-import HeaderDash from "@/components/HeaderDash";
+import Grammar from "@/components/Grammar";
+import Flashcards from "@/components/Flashcards";
+import Translator from "@/components/Translator";
 
 export default {
   name: "Dashboard",
-  components: {HeaderDash},
+  components: {
+    'grammar': Grammar,
+    'flashcards': Flashcards,
+    'Translator': Translator,
+  },
   data() {
     return {
-      components: {
-        'my-header': HeaderDash,
-      },
+        component: 'grammar',
     }
   },
-
 }
 </script>
 
 <style scoped>
 
-.dropdown-content {
-
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  top: 150px;
-  width: 300px;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
-
-  -webkit-transition: all .35s ease;
-  -moz-transition: all .35s ease;
-  -ms-transition: all .35s ease;
-  -o-transition: all .35s ease;
-  transition: all .35s ease;
-}
-
-.dropdown-content a {
-  background: #ddd;
-  color: #444;
-  display: block;
-  padding: 0 25px;
-  text-align: center;
-  text-decoration: none;
-  z-index: 9999;
-
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-
-}
-.type:hover .dropdown-content{
-  visibility: visible;
-  opacity: 1;
-  z-index: 9999;
-  height: auto;
-}
-
-.type:hover a{
-  height: auto;
-}
-
-.type{
-  display: inline-block;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-  padding-bottom:150px;
-  margin: 130px 0px 0px 160px;
-  width: 300px;
-  background: rgba(255, 255, 255, 0.7);
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  border-radius: 20px 20px 0 0 ;
-}
-
-
-.type:hover{
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-transition: all .35s ease;
-  -moz-transition: all .35s ease;
-  -ms-transition: all .35s ease;
-  -o-transition: all .35s ease;
-  transition: all .35s ease;
-}
-
-.type_info{
-  position: absolute;
-  left: 40%;
-  top: 20%;
-  font-family: cg, Quicksand-Light;
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 30px;
-  text-align: center;
-  color: #000000;
-}
-
 .content{
-  width: 80%;
+  width: auto;
 }
-
 
 .main{
-  background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
   overflow: hidden;
 }
+
+.user p{
+  margin-top: 10px;
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: cg, Quicksand-Light;
+
+}
+
+.logo img{
+  max-height: 50px;
+}
+
+.not_full_page{
+  position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+}
+
+header {
+  background: rgba(192, 255, 157, 0.9);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 5px;
+  z-index: 99999;
+}
+
+header .menu{
+  display: inline-grid;
+  align-items: center;
+}
+
+header a{
+  display: inline-grid;
+  align-items: center;
+  text-decoration: none !important;
+  padding-left: 100px;
+  padding-right: 100px;
+
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+}
+
+header ul li {
+  color: black !important;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: cg, Quicksand-Light;
+}
+
+header li:hover{
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
 
 </style>

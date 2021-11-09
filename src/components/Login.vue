@@ -1,24 +1,22 @@
 <template>
 <div class="main">
-  <div class="bg">
-    <img src="remote-working-gaa49a74d7_1920.jpg">
-    <div class="info">Podaj dane logowania lub zaloguj się za pomocą Google</div>
-    <div class="login_form">
-      <div class="reg">
-        <a><p v-on:click="changeRoute('/')">Wróć do strony głównej</p></a>
-        <a><p v-on:click="changeRoute('/register')">Nie masz konta? Zarejestruj się!</p></a>
+  <div class="login">
+    <div class="row">
+      <div class="column_50">
+        <p class="info">Podaj dane logowania lub zaloguj się za pomocą Google</p>
       </div>
-      <div class="formm">
-        <input v-model="form.email" type="email" placeholder="Email">
-        <input v-model="form.password" type="password" placeholder="Hasło">
+      <div class="column_50">
+        <div class="login_form form">
+            <a><p v-on:click="changeRoute('/')">Wróć do strony głównej</p></a>
+            <a><p v-on:click="changeRoute('/register')">Nie masz konta? Zarejestruj się!</p></a>
+            <input v-model="form.email" type="email" placeholder="Email">
+            <input v-model="form.password" type="password" placeholder="Hasło">
+            <button class="bn632-hover bn22" v-on:click="signIn"><span>Zaloguj się</span></button>
+            <button class="bn632-hover bn22" v-on:click="changeRoute('/login')"><span>Google</span></button>
+        </div>
       </div>
-
-      <button class="bn632-hover bn22" v-on:click="signIn"><span>Zaloguj się</span></button><br>
-      <button class="bn632-hover bn22" v-on:click="changeRoute('/login')"><span>Google</span></button>
-
-
     </div>
-  </div>
+    </div>
 </div>
 </template>
 
@@ -57,18 +55,110 @@ export default {
 
 <style scoped>
 
+.login{
+  min-height: 100vh;
+  background-image: url('../../public/remote-working-gaa49a74d7_1920.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.row{
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row .column_50{
+  max-width: 50%;
+  min-width: 50%;
+  position: relative;
+  margin-top: 30px;
+  margin-right: 200px;
+}
+
+.login .row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-top: 100px;
+}
+
+.login_form.form{
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  font-family: cg, Quicksand-Bold;
+  font-size: 20px;
+}
+
+.login_form.form input{
+  position: relative;
+  width: 300px;
+  padding: 12px 0;
+  margin: auto;
+  text-align: center;
+  border: none;
+  border-bottom: 3px solid #0f9100;
+  outline: none;
+  z-index: 999999;
+}
+
+.login_form.form button{
+  margin: auto;
+}
+
+.login_form.form p,a{
+  font-family: cg, Quicksand-Bold;
+  font-size: 20px;
+  text-align: center;
+  color: #0f9100;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.login_form{
+  min-width: 500px;
+  min-height: 600px;
+  background: white;
+  box-shadow: 0 0 5px 10px #fff;
+  border-radius: 10px;
+}
+
+::placeholder {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+
+  color: rgba(114, 164, 101, 0.5);
+}
+.main{
+  height: 100%;
+  overflow: hidden;
+}
+.info{
+  font-family: cg, Quicksand-Light;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 68px;
+  line-height: 90px;
+  text-align: center;
+
+  color: #183018;
+}
+
 
 .bn632-hover {
   position: relative;
-  left: 113px;
-  top: 220px;
   width: 250px;
+  height: 70px;
   font-size: 20px;
   font-weight: 900;
   color: #fff;
   cursor: pointer;
   margin: 10px;
-  height: 70px;
   text-align:center;
   border: none;
   background-size: 300% 100%;
@@ -102,74 +192,13 @@ export default {
   box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
 }
 
-.reg{
-  padding-top: 5px;
-  font-family: cg, Quicksand-Bold;
-  font-size: 20px;
-  text-align: center;
-  color: #0f9100;
-  cursor: pointer;
-  z-index: 99999;
+@media only screen and (max-width:767px){
+
+  .row .column_50{
+    min-width:100%;
+    max-width:100%;
+  }
 }
 
-.login_form{
-  position: absolute;
-  width: 500px;
-  height: 550px;
-  left: 1152px;
-  top: 187px;
-  background: white;
-  box-shadow: 0 0 5px 10px #fff;
-  border-radius: 10px;
-}
-
-.formm{
-  position: absolute;
-  font-family: cg, Quicksand-Bold;
-  font-size: 20px;
-  left: 100px;
-}
-
-.formm input{
-  position: relative;
-  width: 300px;
-  top: -30px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 40px 0 0;
-  border: none;
-  border-bottom: 3px solid #0f9100;
-  outline: none;
-  z-index: 999999;
-}
-
-::placeholder {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 36px;
-  text-align: center;
-
-  color: rgba(114, 164, 101, 0.5);
-}
-.main{
-  height: 100%;
-  overflow: hidden;
-}
-.info{
-  position: absolute;
-  width: 799px;
-  height: 175px;
-  left: 120px;
-  top: 140px;
-  font-family: cg, Quicksand-Light;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 68px;
-  line-height: 90px;
-  text-align: center;
-
-  color: #183018;
-}
 
 </style>

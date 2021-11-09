@@ -24,6 +24,8 @@ img{
 body, html {
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar
@@ -38,5 +40,8 @@ body, html {
   border-radius: 10px;
 }
 
+::selection {
+  background: rgba(175, 255, 120, 0.58);
+}
 
 </style>

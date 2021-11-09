@@ -1,37 +1,58 @@
 <template>
   <div id="main">
     <Header></Header>
-    <div>
-      <div class="bg"><img src="remote-working-gaa49a74d7_1920.jpg"></div>
-      <div class="tekst">Darmowa strona do nauki podstaw języka angielskiego!
-        <div class="begin">Rozpocznij już teraz!
-          <br><br><button class="bn632-hover bn22" v-on:click="changeRoute('/register')"><span>Zarejestruj się!</span></button><br>
+    <div class="start">
+      <div class="row">
+        <div class="column_50">
+          <p class="text">Darmowa strona do nauki podstaw języka angielskiego!</p>
+        </div>
+        </div>
+      <div class="row">
+        <div class="column_50"></div>
+        <div class="column_50 align_right">
+          <div>
+          <p class="begin">Rozpocznij już teraz!</p>
+          <button class="bn632-hover bn22" v-on:click="changeRoute('/register')"><span>Zarejestruj się!</span></button>
           <button class="bn632-hover bn22" v-on:click="changeRoute('/login')"><span>Zaloguj się!</span></button>
+          </div>
         </div>
       </div>
     </div>
     <div id="about">
-      <div class="line" style="top: 1100px"></div>
-      <div class="img1"><img src="laptop-g5e84be185_1280.png"></div>
-      <div class="opis" style="top: 1150px; text-align: left;">Efektywna i szybka nauka języka</div>
-      <div class="opis2" style="top: 1250px; text-align: left;">Dzięki przygotowanym materiałom nauka stanie się łatwa i przyjemna. Wystarczy, że założysz darmowe konto!</div>
-      <div class="line" style="top: 1480px"></div>
-      <div class="img2"><img src="man-g0117e4490_1280.png"></div>
-      <div class="opis" style="top: 1530px; left: 567px; text-align: right;" >Jesteśmy najlepsi na rynku</div>
-      <div class="opis2" style="top: 1630px; left: 360px; text-align: right;">Opinie naszych użytkowników sugerują, iż można zaufać naszej stronie! </div>
+      <div class="row lines">
+            <div class="column_40">
+             <img src="laptop-g5e84be185_1280.png">
+            </div>
 
+            <div class="column_60">
+              <div class="description" style="text-align: right;">Efektywna i szybka nauka języka</div>
+              <div class="description2" style="text-align: right; margin: auto; margin-right: 0 !important;">Dzięki przygotowanym materiałom nauka stanie się łatwa i przyjemna. Wystarczy, że założysz darmowe konto!</div>
+            </div>
+      </div>
     </div>
-    <div id="contact">
-      <div class="line" style="top: 1860px"></div>
-<!--      <form action="" method="get" onsubmit="">-->
-      <div class="img3"><img src="aeroplane-g10339e186_1920.jpg" style="opacity: 0.6"></div>
-      <div class="opis3" style="top: 1950px">Skontaktuj się z nami!</div>
-      <div class="formm" style="top: 2000px"><input type="text" placeholder="Imię"></div>
-      <div class="formm" style="top: 2100px"><input type="email" placeholder="Email"></div>
-      <div class="formm" style="top: 2200px"><input type="text" placeholder="Wiadomość"></div>
-      <button class="bn632-hover bn22" style="left: 1140px; top: 440px">Wyślij</button>
-<!--      </form>-->
-      <div class="line" style="top: 2550px"></div>
+      <div class="row lines">
+        <div class="column_60 ">
+          <div class="description" style="text-align: left;" >Jesteśmy najlepsi na rynku</div>
+          <div class="description2" style="text-align: left;">Opinie naszych użytkowników sugerują, iż można zaufać naszej stronie! </div>
+        </div>
+        <div class="column_40">
+          <img src="man-g0117e4490_1280.png">
+        </div>
+      </div>
+
+    <div id="contact" class="full_height">
+      <div class="row lines">
+        <div class="column_50 center_img">
+          <img class="form_img" src="aeroplane-g10339e186_1920.jpg" style="opacity: 0.6">
+        </div>
+        <div class="column_50 form">
+          <div class="description3" >Skontaktuj się z nami!</div>
+          <input type="text" placeholder="Imię">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Wiadomość">
+          <button class="bn632-hover bn22">Wyślij</button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -53,42 +74,85 @@ export default {
 
 <style scoped>
 
+.start{
+  min-height: 100vh;
+  background-image: url('../../public/remote-working-gaa49a74d7_1920.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.row{
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 70px 0;
+}
 
-#main{
-  overflow: hidden;
-}
-#contact{
-  width: 100%;
-  height: 780px;
-  left: 1200px;
-}
-#about{
-  width: 100%;
-  height: 905px;
+.start .row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 150px 30px 0;
+
 }
 
-.tekst{
-  position: absolute;
-  width: 799px;
-  height: 175px;
-  left: 202px;
-  top: 140px;
+.row .column_50{
+  max-width: 50%;
+  min-width: 50%;
+  position: relative;
+}
+
+.row .column_60{
+  max-width: 60%;
+  min-width: 60%;
+  position: relative;
+  padding: 50px 50px;
+}
+
+.row .column_40{
+  max-width: 40%;
+  min-width: 40%;
+  position: relative;
+  padding: 0 100px;
+}
+
+.row img{
+  max-width: 90%;
+}
+
+.lines{
+  border-bottom: 1px solid #787878;
+
+}
+
+.start .row .column_50.align_right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: -100px;
+}
+
+
+.start .row .column_50.align_right div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin-right: 0;
+}
+
+.text{
 
   font-family: cg, Quicksand-Light;
   font-style: normal;
   font-weight: normal;
   font-size: 68px;
   line-height: 90px;
-
   color: #183018;
 }
 
 .begin{
-  position: absolute;
-  width: 393px;
-  height: 50px;
-  left: 1200px;
-  top: 333px;
   text-align: center;
   font-family: cg, Quicksand-Light;
   font-style: normal;
@@ -99,8 +163,8 @@ export default {
   color: #183018;
 }
 
-
 .bn632-hover {
+  font-family: cg, Quicksand-Light;
   position: relative;
   width: 250px;
   font-size: 20px;
@@ -142,78 +206,77 @@ export default {
   box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
 }
 
-.line{
-
-  position: absolute;
-  width: 1291px;
-  height: 0px;
-  left: 301px;
-  border: 1px solid #787878;
-}
-
-.opis{
-  position: absolute;
-  width: 463px;
-  height: 36px;
-  left: 888px;
+.description{
 
   font-family: cg, Quicksand-Light;
   font-style: normal;
   font-weight: bold;
-  font-size: 29px;
+  font-size: 32px;
   line-height: 36px;
-
   color: #000000;
+  margin-bottom: 30px;
+  margin-top: 40px;
 }
 
-.opis2{
-  position: absolute;
-  width: 669px;
-  height: 108px;
-  left: 888px;
-
+.description2{
   font-family:  cg, Quicksand-Light;
   font-style: normal;
   font-weight: bold;
-  font-size: 29px;
-  line-height: 36px;
-
+  font-size: 26px;
+  line-height: 32px;
+  max-width: 700px;
   color: #636363;
 }
 
-.opis3{
-  position: absolute;
-  width: 420px;
-  height: 50px;
-  left: 1070px;
+.description3{
 
   font-family: cg, Quicksand-Light;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 50px;
-  /* identical to box height */
 
   text-align: center;
 
   color: #000000;
 }
 
-.formm{
-  position: absolute;
+.row .column_50 input{
   font-family: cg, Quicksand-Bold;
   font-size: 20px;
-  left: 1026px;
-}
-.formm input{
-  width: 500px;
+  max-width: 500px;
+  min-width: 500px;
   padding: 15px 0;
   text-align: center;
   margin: 40px 0 0;
   border: none;
   border-bottom: 3px solid #0f9100;
   outline: none;
+}
 
+.row .column_50 .form_img{
+  max-width: 600px;
+  margin: auto;
+}
+.row .column_50.center_img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row .column_50.form{
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.row .column_50 button{
+  margin: 40px auto auto;
+}
+
+#contact.full_height{
+  min-height: 80vh;
+  align-items: center;
 }
 
 ::placeholder {
@@ -226,29 +289,21 @@ export default {
   color: rgba(114, 164, 101, 0.5);
 }
 
-.img1 img{
-  position: absolute;
-  width: 330px;
-  height: 272px;
-  left: 403px;
-  top: 1151px;
-}
+  @media only screen and (max-width:767px){
+    .row .column_60{
+      min-width:100%;
+      max-width:100%;
+    }
 
-.img2 img{
-  position: absolute;
-  width: 310px;
-  height: 290px;
-  left: 1120px;
-  top: 1520px;
-}
+    .row .column_40{
+      min-width:100%;
+      max-width:100%;
+    }
 
-.img3 img{
-  position: absolute;
-  width: 450px;
-  height: 299.3px;
-  left: 415px;
-  top: 2050px;
-}
-
+    .row .column_50{
+      min-width:100%;
+      max-width:100%;
+    }
+  }
 
 </style>

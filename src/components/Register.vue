@@ -1,16 +1,23 @@
 <template>
   <div class="main">
-    <div class="bg">
-      <img src="remote-working-gaa49a74d7_1920.jpg">
-      <div class="info">Wypełnij formularz rejestracji</div>
-      <div class="register_form">
-        <div class="reg"><a><p v-on:click="changeRoute('/')">Wróć do strony głównej</p></a></div>
-        <div class="formm" style="top: 30px;"><input type="text" v-model="form.name" placeholder="Imię"></div>
-        <div class="formm" style="top: 130px;"><input type="text" v-model="form.surname" placeholder="Nazwisko"></div>
-        <div class="formm" style="top: 230px;"><input type="email" v-model="form.email" placeholder="Email"></div>
-        <div class="formm" style="top: 330px;"><input type="password" v-model="form.password" placeholder="Hasło"></div>
-        <div class="formm" style="top: 430px;"><input type="password" v-model="form.password2" placeholder="Powtórz hasło"></div>
-        <button class="bn632-hover bn22" v-on:click="register"><span>Utwórz konto!</span></button><br>
+    <div class="register">
+      <div class="row">
+        <div class="column_50">
+          <p class="info">Wypełnij formularz rejestracji</p>
+        </div>
+        <div class="column_50">
+          <div class="register_form form">
+            <a><p v-on:click="changeRoute('/')">Wróć do strony głównej</p></a>
+
+            <input type="text" v-model="form.name" placeholder="Imię">
+            <input type="text" v-model="form.surname" placeholder="Nazwisko">
+            <input type="email" v-model="form.email" placeholder="Email">
+            <input type="password" v-model="form.password" placeholder="Hasło">
+            <input type="password" v-model="form.password2" placeholder="Powtórz hasło">
+
+            <button class="bn632-hover bn22" v-on:click="register"><span>Utwórz konto!</span></button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -55,17 +62,98 @@ export default {
 
 <style scoped>
 
-.bn632-hover {
+.main {
+  overflow-y: hidden;
+  height: 100%;
+}
+.register{
+  min-height: 100vh;
+  background-image: url('../../public/remote-working-gaa49a74d7_1920.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.row{
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row .column_50{
+  max-width: 50%;
+  min-width: 50%;
   position: relative;
-  left: 113px;
-  top: 540px;
+  margin-top: 30px;
+}
+
+.register .row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-top: 100px;
+}
+
+.register_form{
+  min-width: 500px;
+  min-height: 650px;
+  position: absolute;
+  background: white;
+  box-shadow: 0 0 5px 10px #fff;
+  border-radius: 10px;
+  margin-left: 200px;
+}
+
+.register_form.form{
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  font-family: cg, Quicksand-Bold;
+  font-size: 20px;
+  text-align: center;
+  color: #0f9100;
+}
+.register_form.form input{
+  max-width: 300px;
+  min-width: 250px;
+  text-align: center;
+  margin: auto;
+  border: none;
+  border-bottom: 3px solid #0f9100;
+  outline: none;
+}
+
+::placeholder {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+
+  color: rgba(114, 164, 101, 0.5);
+}
+
+.info{
+  font-family: cg, Quicksand-Light;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 68px;
+  line-height: 90px;
+  text-align: center;
+
+  color: #183018;
+}
+
+
+.bn632-hover {
   width: 250px;
+  height: 70px;
   font-size: 20px;
   font-weight: 900;
   color: #fff;
   cursor: pointer;
   margin: 10px;
-  height: 70px;
   text-align:center;
   border: none;
   background-size: 300% 100%;
@@ -99,67 +187,14 @@ export default {
   box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
 }
 
-.register_form{
-  position: absolute;
-  width: 500px;
-  height: 700px;
-  left: 1152px;
-  top: 147px;
-  background: white;
-  box-shadow: 0 0 5px 10px #fff;
-  border-radius: 10px;
+@media only screen and (max-width:767px){
+
+  .row .column_50{
+    min-width:100%;
+    max-width:100%;
+  }
 }
 
-.reg{
-  padding-top: 5px;
-  font-family: cg, Quicksand-Bold;
-  font-size: 20px;
-  text-align: center;
-  color: #0f9100;
-  cursor: pointer;
-}
 
-.formm{
-  position: absolute;
-  font-family: cg, Quicksand-Bold;
-  font-size: 20px;
-  left: 100px;
-}
-.formm input{
-  width: 300px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 40px 0 0;
-  border: none;
-  border-bottom: 3px solid #0f9100;
-  outline: none;
-}
-::placeholder {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 36px;
-  text-align: center;
 
-  color: rgba(114, 164, 101, 0.5);
-}
-.main{
-  height: 100%;
-  overflow: hidden;
-}
-.info{
-  position: absolute;
-  width: 799px;
-  height: 175px;
-  left: 120px;
-  top: 140px;
-  font-family: cg, Quicksand-Light;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 68px;
-  line-height: 90px;
-  text-align: center;
-
-  color: #183018;
-}
 </style>

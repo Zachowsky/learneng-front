@@ -1,10 +1,8 @@
 <template>
   <div id="footer">
-
       <div class="footer_col">
         <p>Copyright 2022</p>
       </div>
-
   </div>
 </template>
 

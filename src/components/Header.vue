@@ -1,7 +1,6 @@
 <template>
   <div>
     <header>
-      <div class="header">
         <div class="not_full_page">
           <div class="logo">
             <a href="#main"><img src="logo.png"></a>
@@ -17,7 +16,6 @@
             </ul>
           </div>
         </div>
-      </div>
     </header>
   </div>
 
@@ -25,7 +23,7 @@
 
 <script>
 
-//import $ from 'jquery';
+import $ from 'jquery';
 
 export default {
   data: () => ({
@@ -36,18 +34,15 @@ export default {
 
   mounted(){
 
-    /*$(window).scroll(function() {
+    $('body').scroll(function() {
       var scrollTop = $(this).scrollTop();
-
-      $('.header').css({
-        opacity: function() {
-          var elementHeight = $(this).height();
-          return 1 - (elementHeight - scrollTop) / elementHeight;
-        }
-      });
-    });*/
+      if(scrollTop > 100) {
+        $('header').addClass('header_onScroll');
+      }else{
+        $('header').removeClass('header_onScroll');
+      }
+    });
   },
-
 }
 </script>
 
@@ -61,24 +56,33 @@ template {
 }
 
 img{
-
   display: block;
   width: 100%;
   height: auto;
 }
 
-.header {
+header {
   position: fixed;
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: rgba(125, 187, 102, 0.3);
   width: 100%;
   padding: 5px;
   margin: 0;
-  backdrop-filter: blur(25px);
   z-index: 99999;
+  transition: 0.5s;
+}
+
+.header_onScroll{
+  background-color: rgba(125, 187, 102, 0.72);
+  backdrop-filter: blur(25px);
+  transition: 0.5s;
+}
+
+.header_onScroll .logo{
+  width: 90px;
+  transition: 0.5s;
 }
 
 .default_menu a {
@@ -90,7 +94,7 @@ img{
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: 15px 0;
+  padding: 8px 0;
   width: 100%;
   margin: 0;
   max-width: 1500px;
@@ -99,19 +103,22 @@ img{
 .logo {
   width: 120px;
   margin: -10px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.header ul {
+header ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   height: 100%;
-
 }
 
-.header ul li {
+header ul li {
   color: white !important;
   padding: 0 20px;
   font-size: 18px;
