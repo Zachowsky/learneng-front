@@ -11,7 +11,7 @@
           <li v-on:click="component= 'grammar'">Gramatyka</li>
         </a>
         <a>
-          <li v-on:click="component= 'flashcards'">Fiszki</li>
+          <li v-on:click="component= 'flashcardTypes'">Fiszki</li>
         </a>
         <a>
           <li v-on:click="component= 'translate'">Tłumaczenie</li>
@@ -37,6 +37,9 @@
 import Grammar from "@/components/Grammar";
 import Flashcards from "@/components/Flashcards";
 import Translator from "@/components/Translator";
+import FlashcardTypes from "@/components/FlashcardTypes";
+import axios from "axios";
+import endpoint from '../endpoint'
 
 export default {
   name: "Dashboard",
@@ -44,12 +47,35 @@ export default {
     'grammar': Grammar,
     'flashcards': Flashcards,
     'Translator': Translator,
+    'flashcardTypes': FlashcardTypes,
   },
   data() {
     return {
         component: 'grammar',
+        flashcardTypes: [],
+        front: [],
+        back: [],
     }
   },
+
+  mounted() {
+    this.getFlashcardTypes();
+  },
+
+  methods: {
+    getFlashcardTypes(){
+      axios.get(`${endpoint.url}/dashboard`)
+      .then((response) => {
+          if(response.status === 200){
+            this.flashcardTypes = response.data;
+            console.log(this.flashcardTypes)
+            sessionStorage.setItem('flashcardTypes', JSON.stringify(this.flashcardTypes));
+          }
+      }).catch(() => {
+
+      });
+    }
+  }
 }
 </script>
 

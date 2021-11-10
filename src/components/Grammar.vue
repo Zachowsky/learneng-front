@@ -2,7 +2,7 @@
   <div class="grammar">
   <div class="type">
     <div class="type_info">
-      <img  src="start.png">
+      <img src="start.png">
       <p>Początek</p>
       <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
         Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
@@ -17,7 +17,7 @@
 
     <div class="type">
       <div class="type_info">
-        <img  src="group.png">
+        <img src="group.png">
         <p>Zaimki osobowe</p>
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
           Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
@@ -32,7 +32,7 @@
 
     <div class="type">
       <div class="type_info">
-        <img  src="hang-clothes.png">
+        <img src="hang-clothes.png">
         <p>Rzeczowniki policzalne i niepoliczalne</p>
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
           Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
@@ -46,7 +46,7 @@
 
     <div class="type">
       <div class="type_info">
-        <img  src="tense.png">
+        <img src="tense.png">
         <p>Czasy</p>
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
           Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
@@ -60,7 +60,7 @@
 
     <div class="type">
       <div class="type_info">
-        <img  src="podium.png">
+        <img src="podium.png">
         <p>Stopniowanie</p>
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
           Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
@@ -74,7 +74,7 @@
 
     <div class="type">
       <div class="type_info">
-        <img  src="article.png">
+        <img src="article.png">
         <p>Przyimki i przedimki</p>
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
           Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,

@@ -73,7 +73,7 @@ const routes = [
     },
 
     {
-        path: '/flashcards',
+        path: '/dashboard/flashcards',
         name: 'flashcards',
         component: () => import('../components/Flashcards'),
         beforeEnter: notLoggedInGuard,
