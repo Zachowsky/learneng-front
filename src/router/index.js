@@ -5,6 +5,9 @@ import Register from "@/components/Register";
 import Main from "@/components/Main";
 import Dashboard from "@/components/Dashboard";
 import Flashcards from "@/components/Flashcards";
+import ToBe from "@/components/ToBe";
+import Greetings from "@/components/Greetings";
+import PolitePhrases from "@/components/PolitePhrases";
 
 Vue.use(VueRouter);
 Vue.component('login', Login);
@@ -12,6 +15,9 @@ Vue.component('register', Register);
 Vue.component('main', Main);
 Vue.component('dashboard', Dashboard);
 Vue.component('flashcards', Flashcards)
+Vue.component('to-be', ToBe);
+Vue.component('greetings', Greetings);
+Vue.component('polite-phrases', PolitePhrases);
 
 /*
 const loggedInGuard = (to, from, next) => {
@@ -82,6 +88,25 @@ const routes = [
         path: '/translate',
         name: 'translate',
         component: () => import('../components/Translator'),
+        beforeEnter: notLoggedInGuard,
+    },
+    {
+        path: '/tobe',
+        name: 'tobe',
+        component: () => import('../components/ToBe'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/polite-phrases',
+        name: 'politephrases',
+        component: () => import('../components/PolitePhrases'),
+        beforeEnter: notLoggedInGuard,
+    },
+    {
+        path: '/greetings',
+        name: 'greetings',
+        component: () => import('../components/Greetings'),
         beforeEnter: notLoggedInGuard,
     },
 ];

@@ -7,9 +7,10 @@
       <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
         Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
         ratione suscipit?</p>
-      <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-      <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-      <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+      <a v-on:click="changeRoute('/tobe')">Odmiana czasownika TO BE</a>
+      <a v-on:click="changeRoute('/polite-phrases')">Zwroty grzecznościowe</a>
+      <a v-on:click="changeRoute('/greetings')">Przywitania i pożegnania</a>
+      <a v-on:click="changeRoute('/tobe')">Zadania</a>
 
 
     </div>
