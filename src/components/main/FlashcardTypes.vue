@@ -15,7 +15,7 @@
 <script>
 
 import axios from "axios";
-import endpoint from '../endpoint'
+import endpoint from '../../endpoint.json'
 export default {
   name: "FlashcardTypes",
 

@@ -23,7 +23,7 @@
 <script>
 
 import axios from 'axios'
-import endpoint from '../endpoint'
+import endpoint from '../../endpoint.json'
 
 export default {
   name: "Login",
@@ -57,7 +57,7 @@ export default {
 
 .login{
   min-height: 100vh;
-  background-image: url('../../public/remote-working-gaa49a74d7_1920.jpg');
+  background-image: url('../../../public/remote-working-gaa49a74d7_1920.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;

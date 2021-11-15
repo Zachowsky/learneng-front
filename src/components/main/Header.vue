@@ -110,7 +110,7 @@ header {
 }
 
 header ul {
-  list-style-type: none;
+  list-style-type: none !important;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -120,9 +120,9 @@ header ul {
 
 header ul li {
   color: white !important;
-  padding: 0 20px;
-  font-size: 18px;
-  font-weight: 900;
+  padding: 0 20px !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
 }
 
 li:hover{

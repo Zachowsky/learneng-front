@@ -10,9 +10,7 @@
       <a v-on:click="changeRoute('/tobe')">Odmiana czasownika TO BE</a>
       <a v-on:click="changeRoute('/polite-phrases')">Zwroty grzecznościowe</a>
       <a v-on:click="changeRoute('/greetings')">Przywitania i pożegnania</a>
-      <a v-on:click="changeRoute('/tobe')">Zadania</a>
-
-
+      <a v-on:click="changeRoute('/start-ex')">Zadania</a>
     </div>
   </div>
 
@@ -23,13 +21,10 @@
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
           Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
           ratione suscipit?</p>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-
+        <a v-on:click="changeRoute('/personal-pronouns')">Teoria o zaimkach osobowych, przykłady.</a>
+        <a v-on:click="changeRoute('/personal-pronouns-ex')">Zadania</a>
       </div>
     </div>
-
 
     <div class="type">
       <div class="type_info">
@@ -38,12 +33,11 @@
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
           Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
           ratione suscipit?</p>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+        <a v-on:click="changeRoute('/countable')">Teoria o rzeczownikach policzalnych</a>
+        <a v-on:click="changeRoute('/uncountable')">Teoria o rzeczownikach niepoliczalnych</a>
+        <a v-on:click="changeRoute('/nouns-ex')">Zadania</a>
       </div>
     </div>
-
 
     <div class="type">
       <div class="type_info">
@@ -52,12 +46,12 @@
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
           Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
           ratione suscipit?</p>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+        <a v-on:click="changeRoute('/present-simple')">Teoria Present Simple</a>
+        <a v-on:click="changeRoute('/past-simple')">Teoria Past Simple</a>
+        <a v-on:click="changeRoute('/present-continuous')">Teoria Present Continuous</a>
+        <a v-on:click="changeRoute('/past-continuous')">Teoria Past Simple</a>
       </div>
     </div>
-
 
     <div class="type">
       <div class="type_info">
@@ -66,25 +60,11 @@
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
           Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
           ratione suscipit?</p>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+        <a v-on:click="changeRoute('/gradation')">Teoria stopniowania</a>
+        <a v-on:click="changeRoute('/gradation-ex')">Zadania</a>
       </div>
     </div>
 
-
-    <div class="type">
-      <div class="type_info">
-        <img src="article.png">
-        <p>Przyimki i przedimki</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
-          Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
-          ratione suscipit?</p>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-      </div>
-    </div>
   </div>
 </template>
 

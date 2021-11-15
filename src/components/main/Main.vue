@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import Header from "@/components/Header";
+import Header from "@/components/main/Header";
 export default {
   name: "Main",
   components: {Header},
@@ -76,7 +76,7 @@ export default {
 
 .start{
   min-height: 100vh;
-  background-image: url('../../public/remote-working-gaa49a74d7_1920.jpg');
+  background-image: url('../../../public/remote-working-gaa49a74d7_1920.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;

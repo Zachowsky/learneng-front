@@ -34,12 +34,12 @@
 
 <script>
 
-import Grammar from "@/components/Grammar";
-import Flashcards from "@/components/Flashcards";
-import Translator from "@/components/Translator";
-import FlashcardTypes from "@/components/FlashcardTypes";
+import Grammar from "@/components/main/Grammar";
+import Flashcards from "@/components/main/Flashcards";
+import Translator from "@/components/main/Translator";
+import FlashcardTypes from "@/components/main/FlashcardTypes";
 import axios from "axios";
-import endpoint from '../endpoint'
+import endpoint from '../../endpoint.json'
 
 export default {
   name: "Dashboard",

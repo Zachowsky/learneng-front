@@ -1,33 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Login from "@/components/Login";
-import Register from "@/components/Register";
-import Main from "@/components/Main";
-import Dashboard from "@/components/Dashboard";
-import Flashcards from "@/components/Flashcards";
-import ToBe from "@/components/ToBe";
-import Greetings from "@/components/Greetings";
-import PolitePhrases from "@/components/PolitePhrases";
 
 Vue.use(VueRouter);
-Vue.component('login', Login);
-Vue.component('register', Register);
-Vue.component('main', Main);
-Vue.component('dashboard', Dashboard);
-Vue.component('flashcards', Flashcards)
-Vue.component('to-be', ToBe);
-Vue.component('greetings', Greetings);
-Vue.component('polite-phrases', PolitePhrases);
-
-/*
-const loggedInGuard = (to, from, next) => {
-    if (sessionStorage.getItem('loggedIn')) {
-        next();
-    } else {
-        next('/main');
-    }
-};*/
-
 
 Vue.mixin({
     methods: {
@@ -41,6 +15,16 @@ Vue.mixin({
     }}
 );
 
+/*
+const loggedInGuard = (to, from, next) => {
+    if (sessionStorage.getItem('loggedIn')) {
+        next();
+    } else {
+        next('/main');
+    }
+};*/
+
+
 
 const notLoggedInGuard = (to, from, next) => {
     if (sessionStorage.getItem('loggedIn')) {
@@ -51,64 +35,188 @@ const notLoggedInGuard = (to, from, next) => {
 };
 
 const routes = [
+
+    /*MAIN ROUTES*/
+
     {
         path: '/',
         name: 'main',
-        component: () => import('../components/Main'),
+        component: () => import('../components/main/Main'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/register',
         name: 'register',
-        component: () => import('../components/Register'),
+        component: () => import('../components/main/Register'),
         beforeEnter: notLoggedInGuard,
     },
     {
         path: '/login',
         name: 'login',
-        component: () => import('../components/Login'),
+        component: () => import('../components/main/Login'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/dashboard',
         name: 'dashboard',
-        component: () => import('../components/Dashboard'),
+        component: () => import('../components/main/Dashboard'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/dashboard/flashcards',
         name: 'flashcards',
-        component: () => import('../components/Flashcards'),
+        component: () => import('../components/main/Flashcards'),
         beforeEnter: notLoggedInGuard,
     },
     {
         path: '/translate',
         name: 'translate',
-        component: () => import('../components/Translator'),
-        beforeEnter: notLoggedInGuard,
-    },
-    {
-        path: '/tobe',
-        name: 'tobe',
-        component: () => import('../components/ToBe'),
+        component: () => import('../components/main/Translator'),
         beforeEnter: notLoggedInGuard,
     },
 
+
+    /*DESCRIPTION ROUTES*/
+
     {
-        path: '/polite-phrases',
-        name: 'politephrases',
-        component: () => import('../components/PolitePhrases'),
+        path: '/countable',
+        name: 'countable',
+        component: () => import('../components/descriptions/CountableNounsDesc'),
+        beforeEnter: notLoggedInGuard,
+    },
+    {
+        path: '/gradation',
+        name: 'gradation',
+        component: () => import('../components/descriptions/GradationDesc'),
         beforeEnter: notLoggedInGuard,
     },
     {
         path: '/greetings',
         name: 'greetings',
-        component: () => import('../components/Greetings'),
+        component: () => import('../components/descriptions/GreetingsDesc'),
         beforeEnter: notLoggedInGuard,
     },
+
+    {
+        path: '/past-continuous',
+        name: 'past-continuous',
+        component: () => import('../components/descriptions/PastContinuousDesc'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/past-simple',
+        name: 'past-simple',
+        component: () => import('../components/descriptions/PastSimpleDesc'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/personal-pronouns',
+        name: 'personal-pronouns',
+        component: () => import('../components/descriptions/PersonalPronounsDesc'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/polite-phrases',
+        name: 'polite-phrases',
+        component: () => import('../components/descriptions/PolitePhrasesDesc'),
+        beforeEnter: notLoggedInGuard,
+    },
+    {
+        path: '/present-continuous',
+        name: 'present-continuous',
+        component: () => import('../components/descriptions/PresentContinuousDesc'),
+        beforeEnter: notLoggedInGuard,
+    },
+    {
+        path: '/present-simple',
+        name: 'present-simple',
+        component: () => import('../components/descriptions/PresentSimpleDesc'),
+        beforeEnter: notLoggedInGuard,
+    },
+    {
+        path: '/tobe',
+        name: 'tobe',
+        component: () => import('../components/descriptions/ToBeDesc'),
+        beforeEnter: notLoggedInGuard,
+    },
+    {
+        path: '/uncountable',
+        name: 'uncountable',
+        component: () => import('../components/descriptions/UncountableNounsDesc'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    /*EXERCISES ROUTES*/
+
+    {
+        path: '/gradation-ex',
+        name: 'gradation-ex',
+        component: () => import('../components/exercises/GradationEx'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/nouns-ex',
+        name: '',
+        component: () => import('../components/exercises/NounsEx'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/past-continuous-ex',
+        name: '',
+        component: () => import('../components/exercises/PastContinuousEx'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/past-simple-ex',
+        name: '',
+        component: () => import('../components/exercises/PastSimpleEx'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/personal-pronouns-ex',
+        name: '',
+        component: () => import('../components/exercises/PersonalPronounsEx'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/present-continuous-ex',
+        name: '',
+        component: () => import('../components/exercises/PresentContinuousEx'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/present-simple-ex',
+        name: '',
+        component: () => import('../components/exercises/PresentSimpleEx'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/start-ex',
+        name: '',
+        component: () => import('../components/exercises/StartEx'),
+        beforeEnter: notLoggedInGuard,
+    },
+
+    {
+        path: '/translation-ex',
+        name: '',
+        component: () => import('../components/exercises/TranslationEx'),
+        beforeEnter: notLoggedInGuard,
+    },
+
 ];
 
 
