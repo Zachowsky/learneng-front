@@ -6,9 +6,9 @@ import * as scrollTop from '../src/scripts/showScrollTop.js'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronUp, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp, faChevronLeft, faPlayCircle, faCheckCircle, faPlusCircle} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faChevronUp, faChevronLeft);
+library.add(faChevronUp, faChevronLeft, faPlayCircle, faCheckCircle, faPlusCircle);
 
 import VueResource from 'vue-resource'
 import "bootstrap/dist/css/bootstrap.min.css"

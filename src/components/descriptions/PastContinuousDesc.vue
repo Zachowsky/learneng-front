@@ -50,7 +50,7 @@
 
       <p class="subtitle">Pytania i przeczenia</p>
       <p class="subtitle-smaller">Pytania</p>
-      <p class="description">Pytania w tym czasie tworzymy przez standardową inwersję zdania. Na początek zdania przenosimy czasownik pomocniczy to be w formie przeszłej was/were a następnie podajemy podmiot:</p>
+      <p class="description">Pytania w tym czasie tworzymy przez standardową <b>inwersję</b> zdania. Na początek zdania przenosimy czasownik pomocniczy to be w formie przeszłej <b>was/were</b> a następnie podajemy podmiot:</p>
       <div class="center-table">
         <table>
           <thead>
@@ -101,7 +101,7 @@
         </table>
       </div>
       <p class="subtitle-smaller">Przeczenia</p>
-      <p class="description">Aby utworzyć przeczenie, wystarczy, że dodamy słowo negujące not za czasownik pomocniczy to be w formie przeszłej. </p>
+      <p class="description">Aby utworzyć przeczenie, wystarczy, że dodamy słowo negujące <b>not</b> za czasownik pomocniczy to be w formie przeszłej. </p>
       <div class="center-table">
         <table>
           <thead>
@@ -128,7 +128,7 @@
       </div>
 
       <p class="subtitle">Zastosowanie</p>
-      <p class="description">Czasu Past Continuous używamy zawsze, gdy chcemy opisać czynność, która odbywała się w przeszłości, bez konieczności podania informacji o tym czy została ona zakończona. Jednak mamy też kilka bardziej konkretnych zastosowań:</p>
+      <p class="description">Czasu Past Continuous używamy zawsze, gdy chcemy opisać czynność, która odbywała się w przeszłości, bez konieczności podania informacji o tym, <b>czy została ona zakończona</b>. Jednak mamy też kilka bardziej konkretnych zastosowań:</p>
       <ul>
         <li>Gdy mówimy o czynności odbywającej się w przeszłości w sposób ciągły i podajemy czas jej trwania:</li>
       </ul>
@@ -136,7 +136,7 @@
         <table>
           <tbody>
           <tr>
-            <td>I was sleeping all morning.</td>
+            <td>I was sleeping <b>all morning</b>.</td>
             <td>Spałem cały poranek.</td>
           </tr>
           </tbody>
@@ -149,7 +149,7 @@
         <table>
           <tbody>
           <tr>
-            <td>What was he doing last Sunday morning?</td>
+            <td>What was he doing <b>last Sunday morning</b>?</td>
             <td>Co on robił w niedzielę rano?</td>
           </tr>
           </tbody>
@@ -162,7 +162,7 @@
         <table>
           <tbody>
           <tr>
-            <td>I was checking messeges on my phone while my dad was driving.</td>
+            <td>I was checking messeges on my phone <b>while</b> my dad was driving.</td>
             <td>Sprawdzałem wiadomości na telefonie, kiedy mój tata prowadził samochód.</td>
           </tr>
           </tbody>
@@ -175,7 +175,7 @@
         <table>
           <tbody>
           <tr>
-            <td>My neighbour was always complaining about my dog.</td>
+            <td>My neighbour was <b>always complaining</b> about my dog.</td>
             <td>Mój sąsiad zawsze narzekał na mojego psa.</td>
           </tr>
           </tbody>
@@ -188,7 +188,7 @@
         <table>
           <tbody>
           <tr>
-            <td>I was sleeping when you phoned me.</td>
+            <td>I was sleeping <b>when</b> you phoned me.</td>
             <td>Spałem, kiedy do mnie zadzwoniłeś.</td>
           </tr>
           </tbody>

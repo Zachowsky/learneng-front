@@ -29,8 +29,8 @@
         <ul>
           <li>Przymiotniki te stopniujemy poprzez dodanie końcówki <b>-er</b> w stopniu wyższym oraz <b>-est</b> oraz <b>the</b> na początek w najwyższym.</li>
           <li>Jeżeli przymiotnik zakończony jest na <b>-e</b> to dodajemy na koniec tylko <b>-r</b> oraz <b>-st</b>. </li>
-          <li>Jeśli przymiotnik zakończony jest na -y, następuje zamiana -y na -i oraz dodajemy końcówki -er i -est. </li>
-          <li>Jeśli przymiotnik ma na jego końcu sekwencja spółgłoska-samogłoska-spółgłoska. Wtedy następuje podwojenie ostatniej spółgłoski oraz dodanie standardowych końcówek -er i -est.</li>
+          <li>Jeśli przymiotnik zakończony jest na <b>-y</b>, następuje zamiana <b>-y</b> na <b>-i</b> oraz dodajemy końcówki <b>-er</b> i <b>-est</b>. </li>
+          <li>Jeśli przymiotnik ma na jego końcu sekwencja spółgłoska-samogłoska-spółgłoska. Wtedy następuje <b>podwojenie ostatniej spółgłoski</b> oraz dodanie standardowych końcówek <b>-er</b> i <b>-est</b>.</li>
         </ul>
         <div class="center-table">
           <table>
@@ -115,9 +115,9 @@
 
         <p class="subtitle-smaller-colored">Stopniowanie opisowe:</p>
         <ul>
-          <li>Stopniowanie opisowe polega na dodawaniu słów „more” do stopnia wyższego oraz „the most” to stopnia najwyższego. </li>
-          <li>Stosujemy tą zasadę do niektórych przymiotników dwusylabowych oraz z trzema i więcej sylabami. Stopniowanie to możemy zastosować zarówno „w dół” jak i „w górę.  </li>
-          <li>Gdy chcemy powiedzieć, że danej cechy jest mniej lub najmniej powinniśmy zamienić „more” i „the most” na odpowiednio „less” oraz „the least”.</li>
+          <li>Stopniowanie opisowe polega na dodawaniu słów <b>more</b> do stopnia wyższego oraz <b>the most</b> do stopnia najwyższego. </li>
+          <li>Stosujemy tą zasadę do niektórych przymiotników dwusylabowych oraz z trzema i więcej sylabami. Stopniowanie to możemy zastosować zarówno „w dół” jak i „w górę”.  </li>
+          <li>Gdy chcemy powiedzieć, że danej cechy jest mniej lub najmniej powinniśmy zamienić <b>more</b> i <b>the most</b> na odpowiednio <b>less</b> oraz <b>the least</b>.</li>
         </ul>
 
         <div class="center-table">

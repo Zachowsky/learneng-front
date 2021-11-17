@@ -44,9 +44,9 @@
             </tbody>
           </table>
         </div>
-        <p class="description">Ważną rzeczą jest również fakt, iż w III osobie liczby pojedynczej należy do czasownika dodać końcówkę -s.
-          W przypadkach kiedy czasownik kończy się na s, z, x, sh, ch lub pojedyncze O zamiast -s musimy dodać -es.
-          Natomiast podczas gdy czasownik kończy się na literę -y zamieniamy -y na „i” i dodajemy -es. Jeżeli jednak przed -y znajduje się spółgłoska to dodajemy tylko -es bez zamiany.
+        <p class="description">Ważną rzeczą jest również fakt, iż w <b>III osobie liczby pojedynczej</b> należy do czasownika dodać końcówkę <b>-s</b>.
+          W przypadkach kiedy czasownik kończy się na <b>s, z, x, sh, ch</b> lub pojedyncze <b>o</b> zamiast <b>-s</b> musimy dodać <b>-es</b>.
+          Natomiast podczas gdy czasownik kończy się na literę <b>-y</b> zamieniamy <b>-y</b> na <b>i</b> i dodajemy <b>-es</b>. Jeżeli jednak przed <b>-y</b> znajduje się <b>spółgłoska</b> to dodajemy tylko <b>-es bez zamiany</b>.
         </p>
         <p class="subtitle-smaller-colored">Przykłady czasowników:</p>
         <div class="center-table">
@@ -85,7 +85,7 @@
             </tbody>
           </table>
         </div>
-        <p class="description">Szczególnym czasownikiem jest czasownik have, który w 3 osobie liczby pojedynczej przyjmuje formę has.</p>
+        <p class="description"><b>Szczególnym czasownikiem jest czasownik have, który w 3 osobie liczby pojedynczej przyjmuje formę has.</b></p>
         <p class="description">Jak to bywa w czasach prostych, czasownikiem głównym może być też „to be”. Posiada on inną formę dla każdej osoby. </p>
         <p class="subtitle-smaller-colored">Przykład zdania z TO BE:</p>
         <div class="center-table">
@@ -113,8 +113,8 @@
           </table>
         </div>
         <p class="subtitle-smaller"> Pytania i przeczenia:</p>
-        <p class="description">Do tworzenia pytań w czasie Present Simple potrzebny jest operator do.
-          W trzeciej osobie dodajemy do niego końcówkę -es oraz nie dodajemy tej końcówki do czasownika głównego.
+        <p class="description">Do tworzenia pytań w czasie Present Simple potrzebny jest <b>operator do</b>.
+          W trzeciej osobie dodajemy do niego końcówkę <b>-es</b> oraz <b>nie dodajemy</b> tej końcówki do czasownika głównego.
         </p>
         <p class="subtitle-smaller-colored">Przykłady tworzenia pytań ogólnych:</p>
         <div class="center-table">
@@ -137,7 +137,7 @@
             </tbody>
           </table>
         </div>
-        <p class="description">Możemy też tworzyć bardziej rozwinięte pytania używając słów pytających takich jak: What, Who, How itp.</p>
+        <p class="description">Możemy też tworzyć bardziej rozwinięte pytania używając słów pytających takich jak: <b>What, Who, How</b> itp.</p>
         <div class="center-table">
           <table>
             <thead>
@@ -159,7 +159,7 @@
           </table>
         </div>
 
-        <p class="description">Jeśli głównym czasownikiem jest to be, nie używamy już operatora do. Pytania z użyciem tego czasownika są tworzone poprzez tzw. Inwersję:</p>
+        <p class="description">Jeśli głównym czasownikiem jest to be, nie używamy już operatora do. Pytania z użyciem tego czasownika są tworzone poprzez tzw. <b>inwersję</b>:</p>
         <div class="center-table">
           <table>
             <thead>
@@ -181,7 +181,7 @@
           </table>
         </div>
 
-        <p class="description">W przeczeniach również używamy operatora do/does, ale dodajemy do niego słówko not</p>
+        <p class="description">W przeczeniach również używamy operatora <b>do/does</b>, ale dodajemy do niego słówko <b>not</b></p>
         <div class="center-table">
           <table>
             <thead>
@@ -233,11 +233,11 @@
             </thead>
             <tbody>
             <tr>
-              <td>I do my homework every day.</td>
+              <td>I do my homework <b>every day</b>.</td>
               <td>Robię pracę domową codziennie.</td>
             </tr>
             <tr>
-              <td>He usually goes swimming on weekends.</td>
+              <td>He usually goes swimming <b>on weekends</b>.</td>
               <td>On zazwyczaj chodzi pływać w weekendy.</td>
             </tr>
             </tbody>

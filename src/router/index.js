@@ -57,6 +57,12 @@ const routes = [
         component: () => import('../components/main/Login'),
         beforeEnter: notLoggedInGuard,
     },
+    {
+        path: '/thankyou',
+        name: 'thankyou',
+        component: () => import('../components/main/ThankYouPage'),
+        beforeEnter: notLoggedInGuard,
+    },
 
     {
         path: '/dashboard',
@@ -78,6 +84,12 @@ const routes = [
         beforeEnter: notLoggedInGuard,
     },
 
+    {
+        path: '/translation-ex',
+        name: 'translation-ex',
+        component: () => import('../components/exercises/TranslationEx'),
+        beforeEnter: notLoggedInGuard,
+    },
 
     /*DESCRIPTION ROUTES*/
 
@@ -163,56 +175,56 @@ const routes = [
 
     {
         path: '/nouns-ex',
-        name: '',
+        name: 'nouns-ex',
         component: () => import('../components/exercises/NounsEx'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/past-continuous-ex',
-        name: '',
+        name: 'past-continuous-ex',
         component: () => import('../components/exercises/PastContinuousEx'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/past-simple-ex',
-        name: '',
+        name: 'past-simple-ex',
         component: () => import('../components/exercises/PastSimpleEx'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/personal-pronouns-ex',
-        name: '',
+        name: 'personal-pronouns-ex',
         component: () => import('../components/exercises/PersonalPronounsEx'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/present-continuous-ex',
-        name: '',
+        name: 'present-continuous-ex',
         component: () => import('../components/exercises/PresentContinuousEx'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/present-simple-ex',
-        name: '',
+        name: 'present-simple-ex',
         component: () => import('../components/exercises/PresentSimpleEx'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/start-ex',
-        name: '',
+        name: 'start-ex',
         component: () => import('../components/exercises/StartEx'),
         beforeEnter: notLoggedInGuard,
     },
 
     {
         path: '/translation-ex',
-        name: '',
+        name: 'translation-ex',
         component: () => import('../components/exercises/TranslationEx'),
         beforeEnter: notLoggedInGuard,
     },

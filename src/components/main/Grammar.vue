@@ -4,9 +4,7 @@
     <div class="type_info">
       <img src="start.png">
       <p>Początek</p>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
-        Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
-        ratione suscipit?</p>
+      <p class="description"></p>
       <a v-on:click="changeRoute('/tobe')">Odmiana czasownika TO BE</a>
       <a v-on:click="changeRoute('/polite-phrases')">Zwroty grzecznościowe</a>
       <a v-on:click="changeRoute('/greetings')">Przywitania i pożegnania</a>
@@ -18,10 +16,8 @@
       <div class="type_info">
         <img src="group.png">
         <p>Zaimki osobowe</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
-          Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
-          ratione suscipit?</p>
-        <a v-on:click="changeRoute('/personal-pronouns')">Teoria o zaimkach osobowych, przykłady.</a>
+        <p class="description"></p>
+        <a v-on:click="changeRoute('/personal-pronouns')">Teoria o zaimkach osobowych, przykłady</a>
         <a v-on:click="changeRoute('/personal-pronouns-ex')">Zadania</a>
       </div>
     </div>
@@ -30,9 +26,7 @@
       <div class="type_info">
         <img src="hang-clothes.png">
         <p>Rzeczowniki policzalne i niepoliczalne</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
-          Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
-          ratione suscipit?</p>
+        <p class="description"></p>
         <a v-on:click="changeRoute('/countable')">Teoria o rzeczownikach policzalnych</a>
         <a v-on:click="changeRoute('/uncountable')">Teoria o rzeczownikach niepoliczalnych</a>
         <a v-on:click="changeRoute('/nouns-ex')">Zadania</a>
@@ -43,9 +37,7 @@
       <div class="type_info">
         <img src="tense.png">
         <p>Czasy</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
-          Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
-          ratione suscipit?</p>
+        <p class="description"></p>
         <a v-on:click="changeRoute('/present-simple')">Teoria Present Simple</a>
         <a v-on:click="changeRoute('/past-simple')">Teoria Past Simple</a>
         <a v-on:click="changeRoute('/present-continuous')">Teoria Present Continuous</a>
@@ -57,9 +49,7 @@
       <div class="type_info">
         <img src="podium.png">
         <p>Stopniowanie</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim fugiat harum modi nulla odio!
-          Commodi excepturi minima molestias quaerat quod voluptatibus? Dolores impedit laboriosam minus modi quos,
-          ratione suscipit?</p>
+        <p class="description"></p>
         <a v-on:click="changeRoute('/gradation')">Teoria stopniowania</a>
         <a v-on:click="changeRoute('/gradation-ex')">Zadania</a>
       </div>

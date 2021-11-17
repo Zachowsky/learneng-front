@@ -44,14 +44,14 @@
   </div>
       <p class="subtitle-smaller-colored">Tworzenie drugiej formy czasownika:</p>
       <p class="description">
-        Jeśli czasownik jest regularny dodajemy na jego koniec końcówkę -ed lub -d.
+        Jeśli czasownik jest regularny dodajemy na jego koniec końcówkę <b>-ed</b> lub <b>-d</b>.
         Natomiast jeśli chodzi o czasowniki nieregularne nie pozostaje nic innego jak nauczenie się ich odmiany na pamięć.
         Są 3 główne zasady tworzenia czasowników:
       </p>
       <ul>
-        <li>Gdy czasownik kończy się na -y po spółgłosce, zamieniamy -y na -i oraz dodajemy -ed</li>
-        <li>Gdy czasownik jest zbudowany z jednej sylaby oraz posiada na końcu sekwencję spółgłoska-samogłoska-spółgłoska to ostatnia spółgłoska zostanie podwojona oraz dodajemy -ed.</li>
-        <li>Gdy czasownik ma dwie sylaby i druga sylaba jest akcentowana oraz na końcu posiada sekwencję spółgłoska-samogłoska-spółgłoska to również podwajamy ostatnią samogłoskę i dodajemy -ed</li>
+        <li>Gdy czasownik kończy się na <b>-y</b> po spółgłosce, zamieniamy <b>-y</b> na <b>-i</b> oraz dodajemy <b>-ed</b></li>
+        <li>Gdy czasownik jest zbudowany z jednej sylaby oraz posiada na końcu sekwencję <b>spółgłoska-samogłoska-spółgłoska</b> to ostatnia spółgłoska zostanie <b>podwojona</b> oraz dodajemy <b>-ed.</b></li>
+        <li>Gdy czasownik ma dwie sylaby i <b>druga sylaba jest akcentowana</b> oraz na końcu posiada sekwencję <b>spółgłoska-samogłoska-spółgłoska</b> to również <b>podwajamy ostatnią samogłoskę</b> i dodajemy <b>-ed.</b></li>
       </ul>
       <div class="center-table">
         <table>
@@ -79,9 +79,9 @@
 
       </div>
       <p class="subtitle">Pytania i przeczenia</p>
-      <p class="description">Przy tworzeniu pytań i zdań przeczących w czasie Past Simple pojawia się operator did(druga forma czasownika do).
+      <p class="description">Przy tworzeniu pytań i zdań przeczących w czasie Past Simple pojawia się operator <b>did(druga forma czasownika do)</b>.
         Jest on taki sam w każdej osobie, więc nie trzeba się martwić o jego odmianę.
-        Pytania tworzymy poprzez wstawienie operatora Did przed podmiot oraz dodanie podstawowej formy czasownika.
+        Pytania tworzymy poprzez <b>wstawienie operatora Did</b> przed podmiot oraz <b>dodanie podstawowej formy czasownika</b>.
         Wyjątkiem są pytania o podmiot oraz pytania z czasownikiem to be.
         W pierwszym przypadku czasownik zostaje w II formie oraz nie dodajemy Did. W drugim przypadku czasownik to be w czasie przeszłym przechodzi przed podmiot.
       </p>
@@ -111,7 +111,7 @@
         </table>
       </div>
       <p class="description">
-        Przeczenie tworzymy standardowo dodając do operatora did słówko not, a następnie dodajemy podstawową formę czasownika.
+        Przeczenie tworzymy standardowo dodając do operatora <b>did</b> słówko <b>not</b>, a następnie dodajemy podstawową formę czasownika.
       </p>
       <p class="subtitle-smaller-colored">Przykład:</p>
       <div class="center-table">
@@ -126,8 +126,8 @@
       </div>
       <p class="description">
         Wyjątkami od tej zasady są czasowniki modalne oraz czasownik to be.
-        W przypadku to be poprawne formy używane w przeczeniach to was not oraz were not.
-        Natomiast w przypadku czasowników modalnych np.: can , tworzymy przeczenie od jego przeszłej formy czyli could not.
+        W przypadku to be poprawne formy używane w przeczeniach to <b>was not</b> oraz <b>were not</b>.
+        Natomiast w przypadku czasowników modalnych np.: <b>can</b> , tworzymy przeczenie od jego przeszłej formy czyli <b>could not</b>.
       </p>
       <p class="subtitle-smaller-colored">Przykład:</p>
       <div class="center-table">

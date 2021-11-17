@@ -1,18 +1,25 @@
 <template>
+  <div>
+<a v-on:click="changeRoute('/dashboard')" class="button-back"><font-awesome-icon icon="chevron-left"></font-awesome-icon></a>
+  <div class="content">
   <div class="flashcard">
     <div class="flashcard-inner">
       <div class="flashcard-front">
-        <p>{{this.front[0]}} </p>
+        <p id="front">{{this.front[0]}}</p>
       </div>
       <div class="flashcard-back">
-        <p>{{this.back[0]}} </p>
-        <div class="play-btn">
-          <button v-on:click="translate" type="submit" class="btn btn-success" id="play_btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-megaphone-fill" viewBox="0 0 16 16">
-            <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56V3.224zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009a68.14 68.14 0 0 1 .496.008 64 64 0 0 1 1.51.048zm1.39 1.081c.285.021.569.047.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a65.81 65.81 0 0 1 1.692.064c.327.017.65.037.966.06z"/>
-          </svg></button>
-        </div>
+        <p id="back">{{this.back[0]}}</p>
+          <a v-on:click="translate" type="submit" id="play_btn"><font-awesome-icon icon="play-circle"></font-awesome-icon></a>
       </div>
     </div>
+  </div>
+    <div class="buttons">
+      <button id="next" class="btn-outline-primary">NASTĘPNY</button>
+      <button id="1" class="btn-outline-success">UMIEM :)</button>
+      <button id="0" class="btn-outline-danger">NIE UMIEM :(</button>
+    </div>
+  </div>
+
   </div>
 </template>
 
@@ -38,17 +45,31 @@ export default {
 
 
   created() {
-    this.cards = JSON.parse(sessionStorage.getItem('flashcards'));
 
+    this.cards = JSON.parse(sessionStorage.getItem('flashcards'));
     for(let i = 0; i < this.cards.length; i++){
       this.front[i] = this.cards[i].front;
       this.back[i] = this.cards[i].back;
     }
+
+    var fr = this.front;
+    var bc = this.back;
+    var i = 1;
+
+    $(document).on('click', '#next', function () {
+      if(i === fr.length){
+        i = 0;
+      }
+      $('#front').text(fr[i]);
+      $('#back').text(bc[i]);
+      i++;
+
+      return false;
+    });
+
   },
 
   mounted () {
-
-
 
     $(document).ready(function(){
       $('.flashcard-front').on('click', function(){
@@ -64,6 +85,7 @@ export default {
       });
     });
 
+
     this.voiceList = this.synth.getVoices()
 
     if (this.voiceList.length) {
@@ -74,10 +96,7 @@ export default {
       this.voiceList = this.synth.getVoices()
     }
 
-    this.speechEvents()
-
-/*
-    this.loadFlashcards();*/
+    this.speechEvents();
   },
 
   methods: {
@@ -102,48 +121,62 @@ export default {
         }
       })
 
-      this.newSpeech.text = `${this.cards[0].back}`
+      this.newSpeech.text = `${$('#back').text()}`
       this.newSpeech.voice = this.selectedVoice[0];
       this.synth.speak(this.newSpeech)
+
     },
-
-  /*  loadFlashcards(){
-
-    }*/
   }
-
 }
+
 </script>
 
 <style scoped>
 
+@import '../../styles/style.css';
 
-
-.play-btn button {
-  width: 60px;
-  height: 60px;
+.content{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.play-btn svg {
-  width: 35px;
-  height: 40px;
+.buttons{
+  font-family: cg, Quicksand-Light;
+  font-size: 20px;
+  margin: 10px auto auto;
+}
+
+.buttons button{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#play_btn{
+  display: flex;
+  align-self: center;
+  border-radius: 50%;
+}
+
+#play_btn:hover{
+  background-color: #0ba360;
 }
 
 .flashcard {
-  position: absolute;
-  width: 528px;
-  height: 139px;
-  left: 687px;
-  top: 410px;
+  width: 400px;
+  height: 100px;
+  margin-bottom: 10px;
+  margin-top: auto;
 
   font-family: cg, Quicksand-Light;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 70px;
-  line-height: 87px;
-  text-align: center;
-
+  font-weight: 900;
+  font-size: 50px;
   color: #FFFFFF;
+}
+
+.flashcard p{
+  margin-top: 10px;
 }
 
 .flashcard-inner {
@@ -170,12 +203,16 @@ export default {
 
 .flashcard-front {
   color: black;
+  background-image: url('../../../public/paper.jpg');
 }
 
 .flashcard-back {
-  background-color: #000000;
-  color: white;
-  transform: rotateY(180deg);
+  display: flex;
   position: relative;
+  justify-content: space-evenly;
+  background-image: url('../../../public/paper.jpg');
+  color: black;
+  transform: rotateY(180deg);
 }
+
 </style>

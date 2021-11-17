@@ -47,10 +47,15 @@
         </div>
         <div class="column_50 form">
           <div class="description3" >Skontaktuj się z nami!</div>
-          <input type="text" placeholder="Imię">
-          <input type="email" placeholder="Email">
-          <input type="text" placeholder="Wiadomość">
-          <button class="bn632-hover bn22">Wyślij</button>
+          <form class="form" action="https://formsubmit.co/3ceb8a14d7eefc8b2f07712d430763a1" method="POST">
+          <input type="text" name="name" placeholder="Imię" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="message" placeholder="Wiadomość" required>
+          <button type="submit" class="bn632-hover bn22">Wyślij</button>
+            <input type="hidden" name="_next" value="http://localhost:8080/thankyou">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+          </form>
         </div>
       </div>
     </div>
@@ -264,7 +269,7 @@ export default {
   align-items: center;
 }
 
-.row .column_50.form{
+.form{
   display: inline-grid;
   align-items: center;
   justify-content: center;

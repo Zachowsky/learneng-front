@@ -124,6 +124,10 @@ export default {
   outline: none;
 }
 
+.register_form p{
+  cursor: pointer;
+}
+
 ::placeholder {
   font-style: normal;
   font-weight: bold;

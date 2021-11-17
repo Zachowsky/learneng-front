@@ -47,7 +47,7 @@
           </tbody>
         </table>
       </div>
-      <p class="description">Tworzenie czasownika w formie gerund jest dosyć proste, lecz trzeba pamiętać o kilku głównych zasadach.  Pierwszą zasadą jest dodawanie końcówki -ing na koniec czasownika.</p>
+      <p class="description">Tworzenie czasownika w formie <b>gerund</b> jest dosyć proste, lecz trzeba pamiętać o kilku głównych zasadach.  Pierwszą zasadą jest dodawanie końcówki <b>-ing</b> na koniec czasownika.</p>
       <div class="center-table">
         <table>
           <thead>
@@ -72,9 +72,9 @@
           </tbody>
         </table>
       </div>
-      <p class="description">Zasada ta zmienia się w zależności od tego jak kończy się czasownik. Można wyróżnić cztery różne zakończenia czasowników:</p>
+      <p class="description">Zasada ta zmienia się w zależności od tego <b>jak kończy się czasownik</b>. Można wyróżnić cztery różne zakończenia czasowników:</p>
       <ul>
-        <li>Gdy czasownik kończy się na -e, -e znika przy dodawaniu -ing:</li>
+        <li>Gdy czasownik kończy się na <b>-e</b>, <b>-e</b> znika przy dodawaniu <b>-ing</b>:</li>
       </ul>
       <div class="center-table">
         <table>
@@ -101,7 +101,7 @@
         </table>
       </div>
       <ul>
-        <li>Gdy czasownik jest jednosylabowy i na końcu posiada sekwencję spółgłoska-samogłoska-spółgłoska to podwajamy ostatnią spółgłoskę (oprócz spółgłosek W i X) i dodajemy -ing:</li>
+        <li>Gdy czasownik jest jednosylabowy i na końcu posiada sekwencję <b>spółgłoska-samogłoska-spółgłoska</b> to <b>podwajamy ostatnią spółgłoskę</b> (oprócz spółgłosek <b>W</b> i <b>X</b>) i dodajemy <b>-ing</b>:</li>
       </ul>
       <div class="center-table">
         <table>
@@ -128,7 +128,7 @@
         </table>
       </div>
       <ul>
-        <li>Gdy czasownik jest dwusylabowy i na końcu posiada sekwencję spółgłoska-samogłoska-spółgłoska oraz akcent pada na drugą sylabę to podwajamy ostatnią spółgłoske i dodajemy -ing:</li>
+        <li>Gdy czasownik jest dwusylabowy i na końcu posiada sekwencję <b>spółgłoska-samogłoska-spółgłoska</b> oraz <b>akcent pada na drugą sylabę</b> to <b>podwajamy</b> ostatnią spółgłoske i dodajemy <b>-ing</b>:</li>
       </ul>
       <div class="center-table">
         <table>
@@ -151,7 +151,7 @@
         </table>
       </div>
       <ul>
-        <li>Gdy czasownik kończy się na -ie, zmieniamy ją na -y oraz dodajemy -ing:</li>
+        <li>Gdy czasownik kończy się na <b>-ie</b>, zmieniamy ją na <b>-y</b> oraz dodajemy <b>-ing</b>:</li>
       </ul>
       <div class="center-table">
         <table>
@@ -176,7 +176,7 @@
       <p class="subtitle">Pytania i przeczenia</p>
       <p class="subtitle-smaller">Pytania</p>
       <p class="description">
-        Tworzenie pytań jest równie proste co konstrukcja zdań twierdzących. Wystarczy, że zamienimy miejscami czasownik pomocniczy to be z podmiotem. Czasownik główny pozostaje bez zmian.
+        Tworzenie pytań jest równie proste co konstrukcja zdań twierdzących. Wystarczy, że <b>zamienimy miejscami</b> czasownik pomocniczy to be z podmiotem. Czasownik główny pozostaje <b>bez zmian</b>.
       </p>
       <p class="subtitle-smaller-colored">Przykład:</p>
       <div class="center-table">
@@ -230,7 +230,7 @@
       </div>
 
       <p class="subtitle-smaller">Przeczenia</p>
-      <p class="description">Tworzenie przeczeń jest tak samo proste. Standardowo potrzebne jest słowo negujące not. Dodajemy je po czasowniku pomocniczym to be:</p>
+      <p class="description">Tworzenie przeczeń jest tak samo proste. Standardowo potrzebne jest słowo negujące <b>not</b>. Dodajemy je po czasowniku pomocniczym to be:</p>
       <p class="subtitle-smaller-colored">Przykład:</p>
       <div class="center-table">
         <table>
@@ -258,15 +258,15 @@
       </div>
       <p class="subtitle">Zastosowanie</p>
 
-      <p class="description">Mamy 5 podstawowych sytuacji kiedy należy używać czasu Present Continuous:</p>
+      <p class="description">Mamy 5 podstawowych sytuacji, kiedy należy używać czasu Present Continuous:</p>
       <ul>
-        <li>Gdy opisujemy czynności wykonywane w chili ich wypowiadania:</li>
+        <li>Gdy opisujemy czynności wykonywane w chwili ich wypowiadania:</li>
       </ul>
       <div class="center-table">
         <table>
           <tbody>
           <tr>
-            <td>He is sleeping now.</td>
+            <td>He is sleeping <b>now</b>.</td>
             <td>On teraz śpi.</td>
           </tr>
           </tbody>
@@ -279,7 +279,7 @@
         <table>
           <tbody>
           <tr>
-            <td>I am working as a manager this winter.</td>
+            <td>I am working as a manager <b>this winter</b>.</td>
             <td>Tej zimy pracuję jako manager.</td>
           </tr>
           </tbody>
@@ -292,7 +292,7 @@
         <table>
           <tbody>
           <tr>
-            <td>I am meeting my friends tomorrow.</td>
+            <td>I am meeting my friends <b>tomorrow</b>.</td>
             <td>Jutro spotykam się z przyjaciółmi.</td>
           </tr>
           </tbody>
@@ -305,7 +305,7 @@
         <table>
           <tbody>
           <tr>
-            <td>Prices of fuel are getting higher.</td>
+            <td>Prices of fuel are <b>getting higher</b>.</td>
             <td>Ceny paliw rosną.</td>
           </tr>
           </tbody>
@@ -318,7 +318,7 @@
         <table>
           <tbody>
           <tr>
-            <td>He is always interrupting me.</td>
+            <td>He is <b>always</b> interrupting me.</td>
             <td>On zawsze mi przerywa.</td>
           </tr>
           </tbody>

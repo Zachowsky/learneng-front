@@ -14,10 +14,10 @@
           <li v-on:click="component= 'flashcardTypes'">Fiszki</li>
         </a>
         <a>
-          <li v-on:click="component= 'translate'">Tłumaczenie</li>
+          <li v-on:click="component= 'translation-ex'">Tłumaczenie</li>
         </a>
         <a>
-          <li v-on:click="component= 'Translator'">Translator</li>
+          <li v-on:click="component= 'translator'">Translator</li>
         </a>
       </ul>
     </div>
@@ -40,14 +40,16 @@ import Translator from "@/components/main/Translator";
 import FlashcardTypes from "@/components/main/FlashcardTypes";
 import axios from "axios";
 import endpoint from '../../endpoint.json'
+import TranslationEx from "@/components/exercises/TranslationEx";
 
 export default {
   name: "Dashboard",
   components: {
     'grammar': Grammar,
     'flashcards': Flashcards,
-    'Translator': Translator,
+    'translator': Translator,
     'flashcardTypes': FlashcardTypes,
+    'translation-ex': TranslationEx
   },
   data() {
     return {
