@@ -15,20 +15,19 @@ Vue.mixin({
     }}
 );
 
-/*
+
 const loggedInGuard = (to, from, next) => {
     if (sessionStorage.getItem('loggedIn')) {
         next();
     } else {
-        next('/main');
+        next('/');
     }
-};*/
-
+};
 
 
 const notLoggedInGuard = (to, from, next) => {
     if (sessionStorage.getItem('loggedIn')) {
-        next('/');
+        next('/dashboard');
     } else {
         next();
     }
@@ -68,27 +67,27 @@ const routes = [
         path: '/dashboard',
         name: 'dashboard',
         component: () => import('../components/main/Dashboard'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/dashboard/flashcards',
         name: 'flashcards',
         component: () => import('../components/main/Flashcards'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
     {
         path: '/translate',
         name: 'translate',
         component: () => import('../components/main/Translator'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/translation-ex',
         name: 'translation-ex',
         component: () => import('../components/exercises/TranslationEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     /*DESCRIPTION ROUTES*/
@@ -97,71 +96,71 @@ const routes = [
         path: '/countable',
         name: 'countable',
         component: () => import('../components/descriptions/CountableNounsDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
     {
         path: '/gradation',
         name: 'gradation',
         component: () => import('../components/descriptions/GradationDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
     {
         path: '/greetings',
         name: 'greetings',
         component: () => import('../components/descriptions/GreetingsDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/past-continuous',
         name: 'past-continuous',
         component: () => import('../components/descriptions/PastContinuousDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/past-simple',
         name: 'past-simple',
         component: () => import('../components/descriptions/PastSimpleDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/personal-pronouns',
         name: 'personal-pronouns',
         component: () => import('../components/descriptions/PersonalPronounsDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/polite-phrases',
         name: 'polite-phrases',
         component: () => import('../components/descriptions/PolitePhrasesDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
     {
         path: '/present-continuous',
         name: 'present-continuous',
         component: () => import('../components/descriptions/PresentContinuousDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
     {
         path: '/present-simple',
         name: 'present-simple',
         component: () => import('../components/descriptions/PresentSimpleDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
     {
         path: '/tobe',
         name: 'tobe',
         component: () => import('../components/descriptions/ToBeDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
     {
         path: '/uncountable',
         name: 'uncountable',
         component: () => import('../components/descriptions/UncountableNounsDesc'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     /*EXERCISES ROUTES*/
@@ -170,63 +169,63 @@ const routes = [
         path: '/gradation-ex',
         name: 'gradation-ex',
         component: () => import('../components/exercises/GradationEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/nouns-ex',
         name: 'nouns-ex',
         component: () => import('../components/exercises/NounsEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/past-continuous-ex',
         name: 'past-continuous-ex',
         component: () => import('../components/exercises/PastContinuousEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/past-simple-ex',
         name: 'past-simple-ex',
         component: () => import('../components/exercises/PastSimpleEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/personal-pronouns-ex',
         name: 'personal-pronouns-ex',
         component: () => import('../components/exercises/PersonalPronounsEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/present-continuous-ex',
         name: 'present-continuous-ex',
         component: () => import('../components/exercises/PresentContinuousEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/present-simple-ex',
         name: 'present-simple-ex',
         component: () => import('../components/exercises/PresentSimpleEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/start-ex',
         name: 'start-ex',
         component: () => import('../components/exercises/StartEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
     {
         path: '/translation-ex',
         name: 'translation-ex',
         component: () => import('../components/exercises/TranslationEx'),
-        beforeEnter: notLoggedInGuard,
+        beforeEnter: loggedInGuard,
     },
 
 ];

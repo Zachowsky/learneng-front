@@ -31,7 +31,7 @@
   text-align: center;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 43px;
+  font-size: 41px;
   font-weight: bold;
 }
 
@@ -40,7 +40,7 @@ article{
   padding: 10px;
   margin: 15px auto auto;
   background-color: white;
-  font-size: 25px;
+  font-size: 23px;
   text-align: justify;
   -webkit-box-shadow: 1px 5px 15px 2px rgba(123, 123, 123, 1);
   -moz-box-shadow: 1px 5px 15px 2px rgba(123, 123, 123, 1);
@@ -52,14 +52,14 @@ article .description{
 }
 
 article .subtitle{
-  font-size: 36px;
+  font-size: 34px;
   padding-left: 50px;
   font-weight: 900;
   margin-top: 15px;
 }
 
 article .subtitle-smaller{
-  font-size: 28px;
+  font-size: 26px;
   padding-left: 50px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -67,7 +67,7 @@ article .subtitle-smaller{
 }
 
 article .subtitle-smaller-colored{
-  font-size: 28px;
+  font-size: 26px;
   padding-left: 50px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -76,7 +76,7 @@ article .subtitle-smaller-colored{
 }
 
 article .sentence-example{
-  font-size: 30px;
+  font-size: 28px;
   text-align: center;
   font-weight: 900;
   background-color: rgba(11, 163, 96, 0.29);
@@ -94,7 +94,6 @@ article .sentence-example{
 .center-table table {
   text-align: center;
   width: 800px;
-  border-collapse: collapse;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
@@ -113,36 +112,58 @@ article .sentence-example{
   background-color: #afe38e;
 }
 
+table td {
+  border: 1px solid rgba(144, 144, 144, 0.32);
+}
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+
+
 #button {
   display: inline-block;
   background-color: #afe38e;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   position: fixed;
   bottom: 30px;
   right: 30px;
+  padding-top: 5px;
+  margin: 5px;
   transition: background-color .3s,
   opacity .5s, visibility .5s;
   opacity: 0;
   visibility: hidden;
   z-index: 9999;
-  border-radius: 40%;
-  font-size: 34px;
+  border-radius: 20px;
+  font-size: 20px;
   color: #095018;
 }
 
 .button-back{
-  display: inline-block;
+  display: inline-block ;
   background-color: #afe38e;
-  width: 50px;
-  height: 50px;
-  margin: 20px;
+  width: 40px;
+  height: 40px;
+  padding-top: 5px;
+  margin: 5px;
   text-align: center;
   position: fixed;
   z-index: 9999;
-  border-radius: 40%;
-  font-size: 34px;
+  border-radius: 20px;
+  font-size: 20px;
   color: #095018;
 }
 .button-back:hover{

@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <FlashMessage :position="'right bottom'"></FlashMessage>
     <div class="register">
       <div class="row">
         <div class="column_50">
@@ -27,6 +28,7 @@
 
 import axios from "axios";
 import endpoint from "@/endpoint.json";
+import { required, minLength, email, sameAs, alpha} from 'vuelidate/lib/validators'
 
 export default {
 
@@ -44,17 +46,45 @@ export default {
     }
   },
 
+  validations: {
+    form:{
+      name: { required, alpha, min: minLength(3)},
+      surname: { required, alpha, min: minLength(3)},
+      email: { required, email },
+      password: {required, min: minLength(5) },
+      password2: {sameAsPassword: sameAs('password') }
+    }
+  },
+
   methods: {
     register(){
-      axios.post(`${endpoint.url}/register`, this.form)
-      .then((response) => {
-        if(response.status === 200){
-          this.changeRoute("/dashboard");
-        }
-      })
-      .catch(()=>{
-        console.log("err");
-      })
+
+      this.$v.form.$touch();
+      if (this.$v.form.$error) {
+        this.flashMessage.error({
+          status: 'error',
+          title: 'Błąd',
+          message: 'Formularz zawiera błędy!',
+          icon: '../../../cancel.png',
+          time: 2000,
+        })
+      }else{
+        axios.post(`${endpoint.url}/register`, this.form)
+            .then((response) => {
+              if(response.status === 200){
+                this.changeRoute("/dashboard");
+              }
+            })
+            .catch(()=>{
+              this.flashMessage.warning({
+                status: 'warning',
+                title: 'Uwaga',
+                message: 'Użytkownik o podanym adresie email już posiada konto. ',
+                icon: '../../../warning.png',
+                time: 2000,
+              })
+            })
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 <template>
 <div class="main">
+  <FlashMessage :position="'right bottom'"></FlashMessage>
   <div class="login">
     <div class="row">
       <div class="column_50">
@@ -11,8 +12,9 @@
             <a><p v-on:click="changeRoute('/register')">Nie masz konta? Zarejestruj się!</p></a>
             <input v-model="form.email" type="email" placeholder="Email">
             <input v-model="form.password" type="password" placeholder="Hasło">
-            <button class="bn632-hover bn22" v-on:click="signIn"><span>Zaloguj się</span></button>
-            <button class="bn632-hover bn22" v-on:click="changeRoute('/login')"><span>Google</span></button>
+          <button class="bn632-hover bn22" v-on:click="signIn"><span>Zaloguj się</span></button>
+          <button v-google-signin-button="clientId" class="bn632-hover bn22">Google</button>
+
         </div>
       </div>
     </div>
@@ -24,8 +26,15 @@
 
 import axios from 'axios'
 import endpoint from '../../endpoint.json'
+import { required, email } from 'vuelidate/lib/validators'
+import GoogleSignInButton from 'vue-google-signin-button-directive'
 
 export default {
+
+  directives: {
+    GoogleSignInButton,
+  },
+
   name: "Login",
 
   data(){
@@ -33,22 +42,68 @@ export default {
       form: {
         email:'',
         password:'',
-      }
+      },
+
+      clientId: '573479797447-lr5a9k7imn0ddf5jijo91mgmreqv52v7.apps.googleusercontent.com',
+    }
+  },
+
+  validations: {
+    form:{
+      email:{required, email},
+      password: {required}
     }
   },
 
   methods:{
+
     signIn(){
-      axios.post(`${endpoint.url}/login`, this.form)
-      .then((response) =>{
-        if(response.status === 200) {
-          this.changeRoute("/dashboard");
-        }
-      })
-      .catch(() => {
-        console.log('err');
-      })
-    }
+      this.$v.form.$touch();
+      if(this.$v.form.$error){
+        this.flashMessage.error({
+          status: 'error',
+          title: 'Błąd',
+          message: 'Formularz zawiera błędy!',
+          icon: '../../../cancel.png',
+          time: 2000,
+        })
+      }else{
+        axios.post(`${endpoint.url}/login`, this.form)
+            .then((response) =>{
+              if(response.status === 200) {
+                sessionStorage.setItem('loggedIn', JSON.stringify(response.data))
+                this.changeRoute("/dashboard");
+              }
+            })
+            .catch(() => {
+              this.flashMessage.error({
+                status: 'error',
+                title: 'Błąd',
+                message: 'Błędny login bądź hasło!',
+                icon: '../../../cancel.png',
+                time: 2000,
+              })
+            })
+      }
+    },
+
+    OnGoogleAuthSuccess(idToken) {
+      axios.get(`${endpoint.url}/google/${idToken}`)
+          .then((response) => {
+            if (response.status === 200) {
+              console.log('xd')
+              sessionStorage.setItem('loggedIn', JSON.stringify(response.data))
+              this.changeRoute("/dashboard")
+            }
+          })
+          .catch(() => {
+            this.info = 'Niepoprawne dane do logowania';
+          });
+    },
+
+    OnGoogleAuthFail(error) {
+      console.log(error)
+    },
   }
 }
 </script>

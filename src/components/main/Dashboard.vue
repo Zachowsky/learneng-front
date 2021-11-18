@@ -23,7 +23,10 @@
     </div>
     </div>
     <div class="user">
-      <p>Witaj, User</p>
+      <a>Witaj, {{this.sessionData.name}}</a>
+      <div class="logout">
+        <a  v-on:click="logout">Wyloguj się</a>
+      </div>
     </div>
   </header>
   <div class="content">
@@ -57,10 +60,12 @@ export default {
         flashcardTypes: [],
         front: [],
         back: [],
+        sessionData:[],
     }
   },
 
   mounted() {
+    this.sessionData = JSON.parse(sessionStorage.getItem('loggedIn'));
     this.getFlashcardTypes();
   },
 
@@ -70,13 +75,27 @@ export default {
       .then((response) => {
           if(response.status === 200){
             this.flashcardTypes = response.data;
-            console.log(this.flashcardTypes)
             sessionStorage.setItem('flashcardTypes', JSON.stringify(this.flashcardTypes));
           }
-      }).catch(() => {
+      })
+      .catch(() => {
 
       });
-    }
+    },
+
+    logout(){
+      sessionStorage.removeItem('loggedIn');
+      axios.get('/')
+          .then((response) => {
+            if (response.status === 200) {
+              sessionStorage.removeItem('loggedIn');
+              this.changeRoute('/');
+            }
+          })
+          .catch(() => {
+
+          });
+    },
   }
 }
 </script>
@@ -93,17 +112,9 @@ export default {
   overflow: hidden;
 }
 
-.user p{
-  margin-top: 10px;
-  margin-right: 50px;
-  font-size: 18px;
-  font-weight: 700;
-  font-family: cg, Quicksand-Light;
-
-}
-
 .logo img{
   max-height: 50px;
+  margin-right: 100px;
 }
 
 .not_full_page{
@@ -113,7 +124,6 @@ export default {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-
 }
 
 header {
@@ -137,9 +147,7 @@ header a{
   display: inline-grid;
   align-items: center;
   text-decoration: none !important;
-  padding-left: 100px;
-  padding-right: 100px;
-
+  padding-right: 50px;
 }
 
 header ul {
@@ -164,5 +172,38 @@ header li:hover{
   cursor: pointer;
 }
 
+.user a{
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: cg, Quicksand-Light;
+}
+
+.user a:hover{
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
+.logout {
+  padding-top: 10px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.logout a {
+  color: black;
+  text-decoration: none;
+}
+
+.logout a:hover {
+
+}
+
+.user:hover .logout{
+  padding-top: 10px;
+  display: block;
+  background: rgba(192, 255, 157, 0.9);
+}
 
 </style>

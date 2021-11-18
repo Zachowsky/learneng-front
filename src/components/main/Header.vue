@@ -102,7 +102,7 @@ header {
 
 .logo {
   width: 120px;
-  margin: -10px;
+  margin-right: 50px;
   transition: 0.5s;
   display: flex;
   justify-content: flex-start;

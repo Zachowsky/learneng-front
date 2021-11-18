@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Vuelidate from 'vuelidate'
 import router from './router'
 import $ from 'jquery'
+import FlashMessage from '@smartweb/vue-flash-message';
+
 import * as scrollTop from '../src/scripts/showScrollTop.js'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -21,6 +24,8 @@ Vue.config.productionTip = false
 Vue.use(VueResource);
 Vue.use($);
 Vue.use(scrollTop);
+Vue.use(Vuelidate);
+Vue.use(FlashMessage);
 
 new Vue({
   router,
