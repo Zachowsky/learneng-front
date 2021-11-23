@@ -90,6 +90,14 @@ export default {
             if (response.status === 200) {
               sessionStorage.removeItem('loggedIn');
               this.changeRoute('/');
+              this.$swal({
+
+                position: 'center',
+                icon: 'info',
+                title: 'Pomyślnie wylogowano',
+                showConfirmButton: false,
+                timer: 1000
+              })
             }
           })
           .catch(() => {

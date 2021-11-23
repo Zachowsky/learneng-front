@@ -61,13 +61,7 @@ export default {
 
       this.$v.form.$touch();
       if (this.$v.form.$error) {
-        this.flashMessage.error({
-          status: 'error',
-          title: 'Błąd',
-          message: 'Formularz zawiera błędy!',
-          icon: '../../../cancel.png',
-          time: 2000,
-        })
+        this.$swal("Błąd", "Niektóre pola są puste", "error")
       }else{
         axios.post(`${endpoint.url}/register`, this.form)
             .then((response) => {
@@ -76,13 +70,7 @@ export default {
               }
             })
             .catch(()=>{
-              this.flashMessage.warning({
-                status: 'warning',
-                title: 'Uwaga',
-                message: 'Użytkownik o podanym adresie email już posiada konto. ',
-                icon: '../../../warning.png',
-                time: 2000,
-              })
+              this.$swal("Uwaga", "Użytkownik o podanym adresie email juz istnieje.", "warning")
             })
       }
     }

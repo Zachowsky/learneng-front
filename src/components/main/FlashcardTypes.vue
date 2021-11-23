@@ -2,14 +2,14 @@
 <div class="flashcard-types">
   <div class="type" v-for="(type, index) in types" :key="'type'+index" v-on:click="flashcardStart(type.name)">
     <div class="type_info">
-      <img  src="start.png">
+      <img src="article.png">
       <p>{{type.name}}</p>
       <p class="description"></p>
     </div>
   </div>
-  <div class="type">
+  <div class="type" v-on:click="changeRoute('/dashboard/add')">
     <div class="type_info">
-      <img  src="add.png">
+      <img src="add.png">
       <p>Dodaj swój zestaw</p>
       <p class="description"></p>
     </div>
@@ -35,7 +35,6 @@ export default {
   },
 
   methods: {
-
     flashcardStart(type){
       axios.post(`${endpoint.url}/dashboard/${type}`)
       .then((response) => {
@@ -45,7 +44,6 @@ export default {
         }
       })
     }
-
   }
 }
 </script>

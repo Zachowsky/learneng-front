@@ -55,18 +55,14 @@ export default {
     }
   },
 
+
   methods:{
 
     signIn(){
+
       this.$v.form.$touch();
       if(this.$v.form.$error){
-        this.flashMessage.error({
-          status: 'error',
-          title: 'Błąd',
-          message: 'Formularz zawiera błędy!',
-          icon: '../../../cancel.png',
-          time: 2000,
-        })
+        this.$swal("Błąd", "Niektóre pola są puste", "error")
       }else{
         axios.post(`${endpoint.url}/login`, this.form)
             .then((response) =>{
@@ -76,13 +72,7 @@ export default {
               }
             })
             .catch(() => {
-              this.flashMessage.error({
-                status: 'error',
-                title: 'Błąd',
-                message: 'Błędny login bądź hasło!',
-                icon: '../../../cancel.png',
-                time: 2000,
-              })
+              this.$swal("Błąd", "Błędne dane logowania", "error")
             })
       }
     },
@@ -97,7 +87,7 @@ export default {
             }
           })
           .catch(() => {
-            this.info = 'Niepoprawne dane do logowania';
+
           });
     },
 

@@ -82,7 +82,12 @@ const routes = [
         component: () => import('../components/main/Translator'),
         beforeEnter: loggedInGuard,
     },
-
+    {
+        path: '/dashboard/add',
+        name: 'add',
+        component: () => import('../components/main/AddNewFlashcards'),
+        beforeEnter: loggedInGuard,
+    },
     {
         path: '/translation-ex',
         name: 'translation-ex',

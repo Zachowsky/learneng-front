@@ -1,0 +1,85 @@
+
+
+.main{
+    height: auto;
+    width: auto;
+    background-color: #ffffff;
+}
+
+
+.flash-inputs{
+    display: grid;
+    position: relative;
+    width: 50%;
+    padding: 10px;
+    margin: 15px auto auto;
+    max-width: 1000px;
+    -webkit-box-shadow: 1px 1px 35px -9px rgba(146, 146, 146, 1);
+    -moz-box-shadow: 1px 1px 35px -9px rgba(146, 146, 146, 1);
+    box-shadow: 1px 1px 35px -9px rgba(146, 146, 146, 1);
+}
+
+.add-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons select{
+    margin-left: 10px;
+}
+
+.input-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-input{
+    font-family: cg, Quicksand-Bold;
+    font-size: 20px;
+    max-width: 300px;
+    min-width: 300px;
+    text-align: center;
+    border: none;
+    margin: 20px;
+    border-bottom: 3px solid #0f9100;
+    outline: none;
+}
+
+.add{
+    background-color: #afe38e;
+    width: 40px;
+    height: 40px;
+    padding-top: 5px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #095018;
+}
+.add:hover{
+    cursor: pointer;
+    background-color: #aeef80;
+    color: #002b0c;
+}
+
+
+.remove_button{
+    background-color: #afe38e;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: 900;
+    color: #095018;
+    text-decoration: none;
+    text-align: center;
+}
+
+.remove_button:hover{
+    cursor: pointer;
+    background-color: #aeef80;
+    color: #002b0c;
+}
+

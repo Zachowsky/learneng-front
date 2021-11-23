@@ -14,9 +14,8 @@
     </div>
   </div>
     <div class="buttons">
-      <button id="next" class="btn-outline-primary">NASTĘPNY</button>
-      <button id="1" class="btn-outline-success">UMIEM :)</button>
-      <button id="0" class="btn-outline-danger">NIE UMIEM :(</button>
+      <button id="1" class="bn632-hover bn22"> UMIEM :)</button>
+      <button id="0" class="bn632-hover bn23"> NIE UMIEM :(</button>
     </div>
   </div>
 
@@ -46,6 +45,7 @@ export default {
 
   created() {
 
+    var vm = this;
     this.cards = JSON.parse(sessionStorage.getItem('flashcards'));
     for(let i = 0; i < this.cards.length; i++){
       this.front[i] = this.cards[i].front;
@@ -55,18 +55,33 @@ export default {
     var fr = this.front;
     var bc = this.back;
     var i = 1;
+    var correct = 0;
 
-    $(document).on('click', '#next', function () {
+    $(document).on('click', '#1', function () {
       if(i === fr.length){
         i = 0;
+        correct = correct+1;
+        vm.$swal("Info", "Statystyki: "+correct+"/"+vm.cards.length, "info")
+        correct = 0;
       }
       $('#front').text(fr[i]);
       $('#back').text(bc[i]);
       i++;
-
-      return false;
+      correct = correct+1;
+      console.log(correct);
     });
 
+    $(document).on('click', '#0', function () {
+      if(i === fr.length){
+        i = 0;
+        vm.$swal("Info", "Statystyki: "+correct+"/"+vm.cards.length, "info")
+        correct = 0;
+      }
+      $('#front').text(fr[i]);
+      $('#back').text(bc[i]);
+      i++;
+      console.log(correct);
+    });
   },
 
   mounted () {
@@ -134,6 +149,7 @@ export default {
 <style scoped>
 
 @import '../../styles/style.css';
+@import '../../styles/buttons.css';
 
 .content{
   display: grid;
@@ -175,6 +191,10 @@ export default {
   color: #FFFFFF;
 }
 
+.flashcard:hover{
+  cursor: pointer;
+}
+
 .flashcard p{
   margin-top: 10px;
 }
@@ -186,7 +206,7 @@ export default {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 }
 
 .flashcard_rotate{
@@ -202,17 +222,23 @@ export default {
 }
 
 .flashcard-front {
+  border-radius: 50px;
   color: black;
-  background-image: url('../../../public/paper.jpg');
+  background-color: #e5e5e5;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: 1px solid black;
 }
 
 .flashcard-back {
   display: flex;
   position: relative;
   justify-content: space-evenly;
-  background-image: url('../../../public/paper.jpg');
   color: black;
+  background-color: #e5e5e5;
+  border-radius: 50px;
   transform: rotateY(180deg);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: 1px solid black;
 }
 
 </style>
