@@ -81,7 +81,6 @@ export default {
       axios.get(`${endpoint.url}/google/${idToken}`)
           .then((response) => {
             if (response.status === 200) {
-              console.log('xd')
               sessionStorage.setItem('loggedIn', JSON.stringify(response.data))
               this.changeRoute("/dashboard")
             }

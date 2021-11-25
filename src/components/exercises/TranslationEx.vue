@@ -1,6 +1,6 @@
 <template>
   <div class="translation">
-    <div class="type" v-on:click="changeRoute('/present-simple-ex')">
+    <div class="type" v-on:click="changeRoute('/dashboard/present-simple-translation')">
       <div class="type_info">
         <img src="start.png">
         <p>Present Simple</p>
@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <div class="type" v-on:click="changeRoute('/past-simple-ex')">
+    <div class="type" v-on:click="changeRoute('/dashboard/past-simple-translation')">
       <div class="type_info">
         <img src="group.png">
         <p>Past Simple</p>
@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="type" v-on:click="changeRoute('/present-continuous-ex')">
+    <div class="type" v-on:click="changeRoute('/dashboard/present-continuous-translation')">
       <div class="type_info">
         <img src="hang-clothes.png">
         <p>Present Continuous</p>
@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <div class="type" v-on:click="changeRoute('/past-continuous-ex')">
+    <div class="type" v-on:click="changeRoute('/dashboard/past-continuous-translation')">
       <div class="type_info">
         <img src="tense.png">
         <p>Past Continuous</p>

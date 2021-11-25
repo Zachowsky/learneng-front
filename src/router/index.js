@@ -220,6 +220,35 @@ const routes = [
     },
 
     {
+        path: '/dashboard/present-continuous-translation',
+        name: 'present-continuous-translation',
+        component: () => import('../components/exercises/PresentContinuousTranslation'),
+        beforeEnter: loggedInGuard,
+    },
+
+    {
+        path: '/dashboard/present-simple-translation',
+        name: 'present-simple-translation',
+        component: () => import('../components/exercises/PresentSimpleTranslation'),
+        beforeEnter: loggedInGuard,
+    },
+
+    {
+        path: '/dashboard/past-simple-translation',
+        name: 'past-simple-translation',
+        component: () => import('../components/exercises/PastSimpleTranslation'),
+        beforeEnter: loggedInGuard,
+    },
+
+    {
+        path: '/dashboard/past-continuous-translation',
+        name: 'present-continuous-translation',
+        component: () => import('../components/exercises/PastContinuousTranslation'),
+        beforeEnter: loggedInGuard,
+    },
+
+
+    {
         path: '/start-ex',
         name: 'start-ex',
         component: () => import('../components/exercises/StartEx'),

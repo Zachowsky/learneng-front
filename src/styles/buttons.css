@@ -6,7 +6,6 @@
     font-weight: 900;
     color: #fff;
     cursor: pointer;
-    margin: 10px;
     text-align:center;
     border: none;
     background-size: 300% 100%;
@@ -49,4 +48,16 @@
             #b62b2b
     );
     box-shadow: 0 4px 15px 0 rgba(168, 23, 23, 0.75);
+}
+
+
+.bn632-hover.bn24 {
+    background-image: linear-gradient(
+            to right,
+            #0b54a3,
+            #3c66ba,
+            #3075dd,
+            #2b4eb6
+    );
+    box-shadow: 0 4px 15px 0 rgba(23, 64, 168, 0.75);
 }
