@@ -5,10 +5,10 @@
   <div class="flashcard">
     <div class="flashcard-inner">
       <div class="flashcard-front">
-        <p id="front">{{this.front[0]}}</p>
+        <p id="front" style="text-transform: uppercase">{{this.front[0]}}</p>
       </div>
       <div class="flashcard-back">
-        <p id="back">{{this.back[0]}}</p>
+        <p id="back" style="text-transform: uppercase">{{this.back[0]}}</p>
           <a v-on:click="translate" type="submit" id="play_btn"><font-awesome-icon icon="play-circle"></font-awesome-icon></a>
       </div>
     </div>
@@ -68,7 +68,6 @@ export default {
       $('#back').text(bc[i]);
       i++;
       correct = correct+1;
-      console.log(correct);
     });
 
     $(document).on('click', '#0', function () {
@@ -80,7 +79,6 @@ export default {
       $('#front').text(fr[i]);
       $('#back').text(bc[i]);
       i++;
-      console.log(correct);
     });
   },
 

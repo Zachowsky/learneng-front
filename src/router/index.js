@@ -88,12 +88,6 @@ const routes = [
         component: () => import('../components/main/AddNewFlashcards'),
         beforeEnter: loggedInGuard,
     },
-    {
-        path: '/translation-ex',
-        name: 'translation-ex',
-        component: () => import('../components/exercises/TranslationEx'),
-        beforeEnter: loggedInGuard,
-    },
 
     /*DESCRIPTION ROUTES*/
 
@@ -242,7 +236,7 @@ const routes = [
 
     {
         path: '/dashboard/past-continuous-translation',
-        name: 'present-continuous-translation',
+        name: 'past-continuous-translation',
         component: () => import('../components/exercises/PastContinuousTranslation'),
         beforeEnter: loggedInGuard,
     },
@@ -255,6 +249,7 @@ const routes = [
         beforeEnter: loggedInGuard,
     },
 
+
     {
         path: '/translation-ex',
         name: 'translation-ex',
@@ -262,6 +257,13 @@ const routes = [
         beforeEnter: loggedInGuard,
     },
 
+
+    {
+        path: '/gradation-check',
+        name: 'gradation-check',
+        component: () => import('../components/exercises/GradationCheckWords'),
+        beforeEnter: loggedInGuard,
+    },
 ];
 
 

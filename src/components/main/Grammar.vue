@@ -18,7 +18,7 @@
         <p>Zaimki osobowe</p>
         <p class="description"></p>
         <a v-on:click="changeRoute('/personal-pronouns')">Teoria o zaimkach osobowych, przykłady</a>
-        <a v-on:click="changeRoute('/personal-pronouns-ex')">Zadania</a>
+        <a v-on:click="changeRoute('/personal-pronouns-ex')">Sprawdź swoją wiedzę</a>
       </div>
     </div>
 
@@ -51,6 +51,7 @@
         <p>Stopniowanie</p>
         <p class="description"></p>
         <a v-on:click="changeRoute('/gradation')">Teoria stopniowania</a>
+        <a v-on:click="changeRoute('/gradation-check')">Sprawdź znajomość słów</a>
         <a v-on:click="changeRoute('/gradation-ex')">Zadania</a>
       </div>
     </div>

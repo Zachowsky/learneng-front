@@ -50,9 +50,6 @@ export default {
     checkAnswers(){
 
       var answer = $('input[name="answer"]').serializeArray();
-
-
-      console.log(answer);
       var correct = 0;
 
       for(let i = 0; i<this.examples.length; i++){

@@ -33,23 +33,83 @@
 .row-short .column{
     position: relative;
     margin-top: 20px;
+    padding-top: 40px;
 }
 
 .column .example{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 50%;
+}
+
+.column .example-2{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 50%;
+}
+
+.column .example-3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 50%;
 }
 
 .column .example input{
-    max-width: 400px;
-    min-width: 350px;
+    max-width: 500px;
+    min-width: 450px;
     padding: 5px;
     border: 2px solid #a5a5a5;
     border-radius: 4px;
 }
+
+.column .example-2 input{
+    min-width: 400px;
+    min-height: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.column .example-3 input{
+    min-width: 200px;
+    min-height: 50px;
+    text-align: center;
+    margin-right: 20px;
+
+}
+
+.column .example-2 .title-smaller{
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.column .example-3 .title-smaller{
+    min-width: 700px;
+    font-size: 22px;
+    text-align: center;
+
+}
+
+.column .example-3 .align-center{
+    padding-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.column .example-2 input:focus{
+    outline: none !important;
+    border:2px solid #a3ff9d;
+    border-image: linear-gradient(to right, #a3ff9d, #1ecb8e);
+    border-image-slice: 1;
+    moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
 .column .example input:focus{
     outline: none !important;
     border:2px solid #a3ff9d;
@@ -60,12 +120,25 @@
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
+
+.column .example-3 input:focus{
+    outline: none !important;
+    border:2px solid #a3ff9d;
+    border-image: linear-gradient(to right, #a3ff9d, #1ecb8e);
+    border-image-slice: 1;
+    moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
 .column .example p{
-    max-width: 400px;
-    min-width: 300px;
+    max-width: 500px;
+    min-width: 450px;
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: 800;
+    text-align: left;
 }
 
 .correct {
