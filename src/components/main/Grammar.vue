@@ -38,10 +38,10 @@
         <img src="tense.png">
         <p>Czasy</p>
         <p class="description"></p>
-        <a v-on:click="changeRoute('/present-simple')">Teoria Present Simple</a>
-        <a v-on:click="changeRoute('/past-simple')">Teoria Past Simple</a>
-        <a v-on:click="changeRoute('/present-continuous')">Teoria Present Continuous</a>
-        <a v-on:click="changeRoute('/past-continuous')">Teoria Past Simple</a>
+        <a v-on:click="changeRoute('/present-simple')">Teoria Present Simple</a><button>Zadania</button>
+        <a v-on:click="changeRoute('/past-simple')">Teoria Past Simple</a><button>Zadania</button>
+        <a v-on:click="changeRoute('/present-continuous')">Teoria Present Continuous</a><button>Zadania</button>
+        <a v-on:click="changeRoute('/past-continuous')">Teoria Past Simple</a><button>Zadania</button>
       </div>
     </div>
 

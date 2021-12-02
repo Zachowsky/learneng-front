@@ -66,7 +66,7 @@ export default {
         axios.post(`${endpoint.url}/register`, this.form)
             .then((response) => {
               if(response.status === 200){
-                this.changeRoute("/dashboard");
+                this.$swal("Udało się", "Konto zostało założone", "success")
               }
             })
             .catch(()=>{

@@ -5,7 +5,7 @@ import router from './router'
 import $ from 'jquery'
 import FlashMessage from '@smartweb/vue-flash-message';
 import VueSweetalert2 from 'vue-sweetalert2';
-
+import underscore from 'underscore';
 
 import * as scrollTop from '../src/scripts/showScrollTop.js'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -30,6 +30,7 @@ Vue.use(scrollTop);
 Vue.use(Vuelidate);
 Vue.use(FlashMessage);
 Vue.use(VueSweetalert2)
+Vue.use(underscore)
 
 new Vue({
   router,

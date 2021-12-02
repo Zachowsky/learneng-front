@@ -26,7 +26,7 @@
 
 import axios from 'axios'
 import endpoint from '../../endpoint.json'
-import { required, email } from 'vuelidate/lib/validators'
+import { required } from 'vuelidate/lib/validators'
 import GoogleSignInButton from 'vue-google-signin-button-directive'
 
 export default {
@@ -50,7 +50,7 @@ export default {
 
   validations: {
     form:{
-      email:{required, email},
+      email:{required},
       password: {required}
     }
   },
