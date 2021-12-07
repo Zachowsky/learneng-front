@@ -24,9 +24,9 @@
     </div>
     <div class="user">
       <a>Witaj, {{this.sessionData.name}}</a>
-      <div class="logout">
-        <a  v-on:click="changePassword">Zmień hasło</a>
-        <a  v-on:click="logout">Wyloguj się</a>
+      <div class="drop">
+        <a v-on:click="changePassword">Zmień hasło</a>
+        <a v-on:click="logout">Wyloguj się</a>
       </div>
     </div>
   </header>
@@ -85,51 +85,51 @@ export default {
     },
 
     async changePassword() {
-      let password = await this.$swal({
-        title: 'Hasło musi mieć conajmniej 5 znaków!',
-        input: 'text',
-        inputPlaceholder: 'Podaj hasło',
-        showCloseButton: true,
-
-      });
-
       if (this.sessionData.password === null) {
         this.$swal({
           position: 'center',
           icon: 'info',
           title: 'Nie możesz zmienić hasła, ponieważ jesteś zalogowany przez Google',
-          showConfirmButton: false,
-          timer: 2500
+          showConfirmButton: true,
         })
-      } else if (password.value.length >= 5){
+      }else{
+        let password = await this.$swal({
+          title: 'Hasło musi mieć conajmniej 5 znaków!',
+          input: 'text',
+          inputPlaceholder: 'Podaj hasło',
+          showCloseButton: true,
 
-        const userData = {
-          email: this.sessionData.email,
-          password: password.value,
-      }
+        });
+        if (password.value.length >= 5){
 
-      await axios.post(`${endpoint.url}/dashboard/password`, userData)
-      .then((response) => {
-        if(response.status === 200){
+          const userData = {
+            email: this.sessionData.email,
+            password: password.value,
+          }
+
+          await axios.post(`${endpoint.url}/dashboard/password`, userData)
+              .then((response) => {
+                if(response.status === 200){
+                  this.$swal({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Hasło zostało zmienione',
+                    showConfirmButton: false,
+                    timer: 2000
+                  })
+                }
+              })
+        }else{
           this.$swal({
             position: 'center',
-            icon: 'success',
-            title: 'Hasło zostało zmienione',
+            icon: 'error',
+            title: 'Hasło nie spełnia wymagań',
             showConfirmButton: false,
             timer: 2000
           })
         }
-      })
-    }else{
-        this.$swal({
-          position: 'center',
-          icon: 'error',
-          title: 'Hasło nie spełnia wymagań',
-          showConfirmButton: false,
-          timer: 2000
-        })
-    }
-      console.log(password.value)
+        console.log(password.value)
+      }
     },
 
     logout(){
@@ -241,23 +241,19 @@ header li:hover{
   cursor: pointer;
 }
 
-.logout {
+.drop {
   padding-top: 10px;
-  display: block;
+  display: none;
   position: absolute;
   z-index: 1;
 }
 
-.logout a {
+.drop a {
   color: black;
   text-decoration: none;
 }
 
-.logout a:hover {
-
-}
-
-.user:hover .logout{
+.user:hover .drop{
   padding-top: 10px;
   display: block;
   background: rgba(192, 255, 157, 0.9);

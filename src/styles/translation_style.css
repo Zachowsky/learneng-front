@@ -99,6 +99,10 @@
     margin-bottom: 20px;
 }
 
+.column .example-3 .align-center button{
+    margin-left: 20px;
+}
+
 .column .example-2 input:focus{
     outline: none !important;
     border:2px solid #a3ff9d;

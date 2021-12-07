@@ -45,7 +45,6 @@ export default {
             this.examples = response.data;
           }
       })
-
     },
 
     checkAnswers(){
