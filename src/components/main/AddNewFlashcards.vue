@@ -56,7 +56,7 @@ export default {
 
       var fr = $('input[name="en"]').serializeArray();
       var bc = $('input[name="pl"]').serializeArray();
-
+      var empty = false;
 
       let time = new Date().toLocaleTimeString();
 
@@ -65,36 +65,35 @@ export default {
         flashcard: []
       }
 
-      for(let i=0; i<fieldCounter; i++) {
-        flashcard.flashcard.push({front: fr[i].value, back: bc[i].value})
-
+      for(let j=0; j<fieldCounter; j++){
+        empty = fr[j].value === '' || bc[j].value === '';
       }
 
-      for(let j = 0; j<fieldCounter; j++){
-        if(flashcard.flashcard[j].front === '' || flashcard.flashcard[j].back === ''){
-          vm.$swal({
-            position: 'center',
-            icon: 'error',
-            title: 'Niektóre pola są puste!',
-            showConfirmButton: false,
-            timer: 1500
-          })
-        }
-        else{
+      for(let i=0; i<fieldCounter; i++) {
+        flashcard.flashcard.push({front: fr[i].value, back: bc[i].value})
+      }
 
-          axios.post(`${endpoint.url}/dashboard/add/`, flashcard)
-              .then((response) => {
-                if(response.status === 200){
-                  vm.$swal({
-                    position: 'center',
-                    icon: 'success',
-                    title: 'Pomyślnie dodano fiszki!',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })
-                }
-              })
-        }
+      if(empty === false){
+        axios.post(`${endpoint.url}/dashboard/add/`, flashcard)
+            .then((response) => {
+              if(response.status === 200){
+                vm.$swal({
+                  position: 'center',
+                  icon: 'success',
+                  title: 'Pomyślnie dodano fiszki!',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+              }
+            })
+      }else{
+        vm.$swal({
+          position: 'center',
+          icon: 'error',
+          title: 'Niektóre pola są puste!',
+          showConfirmButton: false,
+          timer: 1500
+        })
       }
     })
     },

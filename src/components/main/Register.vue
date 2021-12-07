@@ -67,6 +67,7 @@ export default {
             .then((response) => {
               if(response.status === 200){
                 this.$swal("Udało się", "Konto zostało założone", "success")
+                this.changeRoute('/login');
               }
             })
             .catch(()=>{
