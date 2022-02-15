@@ -44,7 +44,7 @@ export default {
         password:'',
       },
 
-      clientId: '573479797447-lr5a9k7imn0ddf5jijo91mgmreqv52v7.apps.googleusercontent.com',
+      clientId: 'YOUR GOOGLE CLIENT ID',
     }
   },
 
