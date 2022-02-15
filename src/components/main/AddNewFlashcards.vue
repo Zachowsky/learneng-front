@@ -5,7 +5,7 @@
   <div class="flash-inputs">
     <div class="input-row">
     <input class="add-input" oninput="this.value = this.value.toUpperCase()" type="text" name="en" value="" placeholder="Słówko po ang."/>
-    <input class="add-input" oninput="this.value = this.value.toUpperCase()" type="text" name="pl" value="" placeholder="Tłumaczenie"/><a id="add" class="add"><font-awesome-icon icon="plus"></font-awesome-icon></a>
+    <input class="add-input" oninput="this.value = this.value.toUpperCase()" type="text" name="pl" value="" placeholder="Tłumaczenie"/>         <a id="add" class="add"><font-awesome-icon icon="plus"></font-awesome-icon></a>
   </div>
   </div>
   <div class="add-btn">
@@ -30,17 +30,19 @@ export default {
 
   mounted() {
 
-    var vm = this;
-    var fieldCounter = 1;
+    let vm = this;
+    let fieldCounter = 1;
 
     $(document).ready(function (){
-      var max = 15;
+      let max = 15;
       $($('#add')).click(function(){
         if(fieldCounter <= max){
           $($('.flash-inputs')).append(
               '<div style="display: flex; align-items: center; justify-content: center;">' +
-              '<input class="add-input" oninput="this.value = this.value.toUpperCase()" type="text" value="" name="en" placeholder="Słówko po ang."/>' +
-              '<input class="add-input" oninput="this.value = this.value.toUpperCase()" type="text" value="" name="pl" placeholder="Tłumaczenie"/><a class="remove_button">-</a>' +
+              '<input class="add-input" oninput="this.value = this.value.toUpperCase()"' +
+              ' type="text" value="" name="en" placeholder="Słówko po ang."/>' +
+              '<input class="add-input" oninput="this.value = this.value.toUpperCase()"' +
+              ' type="text" value="" name="pl" placeholder="Tłumaczenie"/><a class="remove_button">-</a>' +
               '</div>');
           fieldCounter++;
         }
@@ -54,9 +56,9 @@ export default {
 
     $('#click').on('click', function (){
 
-      var fr = $('input[name="en"]').serializeArray();
-      var bc = $('input[name="pl"]').serializeArray();
-      var empty = false;
+      let fr = $('input[name="en"]').serializeArray();
+      let bc = $('input[name="pl"]').serializeArray();
+      let empty = false;
 
       let time = new Date().toLocaleTimeString();
 

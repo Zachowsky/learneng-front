@@ -48,6 +48,7 @@ export default {
   },
 
   methods: {
+
     checkIfAdjective(word) {
 
       axios.get(`${endpoint.url}/gradation/check/${word}`)
@@ -65,6 +66,8 @@ export default {
           })
 
     },
+
+
     checkIfComparative(word) {
 
       axios.get(`${endpoint.url}/gradation/check/${word}`)

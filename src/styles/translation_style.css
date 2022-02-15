@@ -108,7 +108,7 @@
     border:2px solid #a3ff9d;
     border-image: linear-gradient(to right, #a3ff9d, #1ecb8e);
     border-image-slice: 1;
-    moz-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -119,7 +119,7 @@
     border:2px solid #a3ff9d;
     border-image: linear-gradient(to right, #a3ff9d, #1ecb8e);
     border-image-slice: 1;
-    moz-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -130,7 +130,7 @@
     border:2px solid #a3ff9d;
     border-image: linear-gradient(to right, #a3ff9d, #1ecb8e);
     border-image-slice: 1;
-    moz-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;

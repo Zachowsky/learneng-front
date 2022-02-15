@@ -32,7 +32,7 @@ export default {
   methods: {
 
     translateText:function(text, language){
-      this.$http.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.202' +
+      this.$http.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.202'+
           '11104T151508Z.0e4ca85b2359bd38.0495cf6c5eab432be51c684bb810095ba4626d27&lang='+language+'&text='+text)
           .then((response) => {
             this.translatedText = response.body.text[0];
@@ -40,6 +40,8 @@ export default {
     }
   },
 }
+
+
 </script>
 
 <style scoped>
